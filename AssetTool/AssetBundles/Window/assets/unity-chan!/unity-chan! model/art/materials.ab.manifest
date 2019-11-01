@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 1854017587
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e48e02268cc360ac46bd389b02d09d6f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/skin1.mat
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/body.mat
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/eyeline.mat
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/mat_cheek.mat
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/face.mat
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/eye_L1.mat
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/eye_R1.mat
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/eyebase.mat
+- Assets/unity-chan!/Unity-chan! Model/Art/Materials/hair.mat
+Dependencies:
+- E:/unity_project/AssetTool/AssetTool/AssetBundles/Window/assets/unity-chan!/unity-chan!
+  model/art/unitychanshader/shader.ab
+- E:/unity_project/AssetTool/AssetTool/AssetBundles/Window/assets/unity-chan!/unity-chan!
+  model/art/unitychanshader/texture.ab

@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 763680815
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4be44b17b507b2e85e5d55c9cf18aaeb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8101d34b2ca4002366ee1be133412cbb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_ARpose2.fbx
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_ARpose1.fbx
+Dependencies: []

@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 2837146037
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cefea88adea74946c5ff85e9f06925c6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/atlas/sprite1/Blood13.png
+- Assets/Resources/atlas/sprite1/Blood7.png
+- Assets/Resources/atlas/sprite1/Blood5.png
+- Assets/Resources/atlas/sprite1/Blood6.png
+- Assets/Resources/atlas/sprite1/Blood10.png
+- Assets/Resources/atlas/sprite1/Blood9.png
+- Assets/Resources/atlas/sprite1/Blood4.png
+- Assets/Resources/atlas/sprite1/Blood3.png
+- Assets/Resources/atlas/sprite1/Blood1.png
+- Assets/Resources/atlas/sprite1/Blood8.png
+- Assets/Resources/atlas/sprite1/Blood2.png
+- Assets/Resources/atlas/sprite1/Blood11.png
+- Assets/Resources/atlas/sprite1/Blood12.png
+Dependencies: []

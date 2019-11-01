@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 2912882998
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 922ff4a7abe9f3e1caa0ed7510525b13
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1adf4c3a0b393b08ed7a28c22b83c183
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 319
+  Script: {instanceID: 0}
+Assets:
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/SURPRISE.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/angry1@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_U.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/disstract2@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_O.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_E.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/sap@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/conf@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/disstract1@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/smile2@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/eye_close@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/face only mask.mask
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/smile1@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_I.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/angry2@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/default@unitychan.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_A.anim
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/ASHAMED.anim
+Dependencies: []

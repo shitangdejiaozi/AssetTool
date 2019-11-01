@@ -1,0 +1,63 @@
+ManifestFileVersion: 0
+CRC: 1778673209
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets/resources/scenes.ab
+      Dependencies:
+        Dependency_0: assets/resources/unit.ab
+        Dependency_1: assets/unity-chan!/unity-chan! model/art/materials.ab
+        Dependency_2: assets/unity-chan!/unity-chan! model/art/models.ab
+        Dependency_3: assets/unity-chan!/unity-chan! model/art/animations/faceanimation.ab
+    Info_1:
+      Name: assets/resources/unit.ab
+      Dependencies:
+        Dependency_0: assets/unity-chan!/unity-chan! model/art/materials.ab
+        Dependency_1: assets/unity-chan!/unity-chan! model/art/models.ab
+        Dependency_2: assets/unity-chan!/unity-chan! model/art/animations/faceanimation.ab
+        Dependency_3: assets/unity-chan!/unity-chan! model/art/animations/animators.ab
+    Info_2:
+      Name: assets/resources/materials.ab
+      Dependencies: {}
+    Info_3:
+      Name: assets/resources/prefabs/uiprefab.ab
+      Dependencies: {}
+    Info_4:
+      Name: assets/resources/prefabs.ab
+      Dependencies:
+        Dependency_0: assets/resources/materials.ab
+    Info_5:
+      Name: assets/resources/textures.ab
+      Dependencies: {}
+    Info_6:
+      Name: assets/resources/atlas/sprite1.ab
+      Dependencies: {}
+    Info_7:
+      Name: assets/resources/atlas/sprite2.ab
+      Dependencies: {}
+    Info_8:
+      Name: assets/unity-chan!/unity-chan! model/art/materials.ab
+      Dependencies:
+        Dependency_0: assets/unity-chan!/unity-chan! model/art/unitychanshader/shader.ab
+        Dependency_1: assets/unity-chan!/unity-chan! model/art/unitychanshader/texture.ab
+    Info_9:
+      Name: assets/unity-chan!/unity-chan! model/art/unitychanshader/shader.ab
+      Dependencies: {}
+    Info_10:
+      Name: assets/unity-chan!/unity-chan! model/art/unitychanshader/texture.ab
+      Dependencies: {}
+    Info_11:
+      Name: assets/unity-chan!/unity-chan! model/art/models.ab
+      Dependencies:
+        Dependency_0: assets/unity-chan!/unity-chan! model/art/materials.ab
+    Info_12:
+      Name: assets/unity-chan!/unity-chan! model/art/animations/faceanimation.ab
+      Dependencies: {}
+    Info_13:
+      Name: assets/unity-chan!/unity-chan! model/art/animations.ab
+      Dependencies: {}
+    Info_14:
+      Name: assets/unity-chan!/unity-chan! model/art/animations/animators.ab
+      Dependencies:
+        Dependency_0: assets/unity-chan!/unity-chan! model/art/animations/faceanimation.ab
+        Dependency_1: assets/unity-chan!/unity-chan! model/art/animations.ab

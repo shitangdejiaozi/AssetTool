@@ -60,12 +60,13 @@ public class AssetBundleTool
     }
 
     [MenuItem("AssetBundle/构建AssetBundle")]
-    public static void BuildAssetBundle()
+    public static bool BuildAssetBundle()
     {
+        bool IsRebuild = true;
         BuildTarget buildTarget = EditorUserBuildSettings.activeBuildTarget;
         string platformName = GetPlatformName(buildTarget);
         BundleRealPath = BundleRealRootPath + "/" + platformName; //ab保存的完整目录
-        BuildAssetBundleSavePath(true);
+        BuildAssetBundleSavePath(IsRebuild);
         List<AssetBundleBuild> bundleList = new List<AssetBundleBuild>();
 
         var buildCfg = AssetDatabase.LoadAssetAtPath<BuildConfig>(configPath);
@@ -76,13 +77,36 @@ public class AssetBundleTool
         }
 
         bundleList = BuildListByDepends(bundleList, buildCfg.collectPaths); //收集依赖
-
         Debug.LogError("bundle list :" + bundleList.Count);
 
+        if (bundleList.Count == 0)
+        {
+            EditorUtility.DisplayDialog("提示", "资源列表为空", "OK");
+            return false;
+        }
+
+        EditorUtility.DisplayProgressBar("开始构建", "正在分析", 0.5f);
+
+        BuildAssetBundleOptions option = BuildAssetBundleOptions.ChunkBasedCompression |
+                                         BuildAssetBundleOptions.IgnoreTypeTreeChanges |
+                                         BuildAssetBundleOptions.DeterministicAssetBundle;
+        if(IsRebuild)
+        {
+            option |= BuildAssetBundleOptions.ForceRebuildAssetBundle; //默认是增量打包的
+        }
+        AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(BundleRealPath, bundleList.ToArray(), option, buildTarget);
+        EditorUtility.ClearProgressBar();
+        if(manifest == null)
+        {
+            EditorUtility.DisplayDialog("提示", "生成bundle失败", "OK");
+            return false;
+        }
+
+        return true;
     }
 
     /// <summary>
-    /// 根据目录下所有文件夹来构建AssetBuild列表
+    /// 根据目录下所有文件夹来构建AssetBuild列表,包含所有要打AB的资源
     /// </summary>
     /// <param name="path"></param>
     /// <returns></returns>
@@ -134,7 +158,7 @@ public class AssetBundleTool
     }
 
     /// <summary>
-    /// 根据目录下文件的依赖来构建AssetBuild列表
+    /// 根据目录下文件的依赖来构建AssetBuild列表,为了防止资源冗余
     /// </summary>
     /// <returns></returns>
     private static List<AssetBundleBuild> BuildListByDepends(List<AssetBundleBuild> abList, List<string> paths)
@@ -142,29 +166,110 @@ public class AssetBundleTool
         List<AssetBundleBuild> bundleList = new List<AssetBundleBuild>();
         string title = "收集依赖";
         EditorUtility.DisplayProgressBar(title, "正在收集...", 0f);
+        Dictionary<string, List<string>> abDict = new Dictionary<string, List<string>>(); //保存ab:AssetList
+        Dictionary<string, bool> assetDict = new Dictionary<string, bool>(); //保存所有的Assetname
 
+        for(int i = 0; i< abList.Count; i++)
+        {
+            List<string> assets = new List<string>(abList[i].assetNames);
+            abDict[abList[i].assetBundleName] = assets;
+            for(int j = 0; j< assets.Count; j++)
+            {
+                assetDict[assets[j]] = true;
+            }
+        }
+        List<string> dependsAssets = new List<string>();
+        for(int i =  0; i< paths.Count; i++)
+        {
+            string dirPath = paths[i];
+            EditorUtility.DisplayProgressBar(title, string.Format("正在收集-{0}", dirPath), i * 1.0f / paths.Count);
+            if(Directory.Exists(dirPath))
+            {
+                List<string> collectAssets = new List<string>();
+                string[] assetsList = Directory.GetFiles(dirPath);
+                for(int j = 0; j < assetsList.Length; j ++)
+                {
+                    if(assetsList[j].EndsWith(".prefab")) //主要针对prefab，可能存在相互的资源引用
+                    {
+                        string assetName = assetsList[i].Replace("\\", "/");
+                        if(assetDict.ContainsKey(assetName)) //已经对prfab自身打过包了，现在再收集它的依赖
+                        {
+                            collectAssets.Add(assetName);
+                            Debug.LogError("collect assets" + assetName);
+                        }
+                    }
+                }
+                
+
+                if(collectAssets.Count > 0)
+                {
+                    string[] depends = AssetDatabase.GetDependencies(collectAssets.ToArray());
+                    dependsAssets.AddRange(depends);
+                }
+            }
+        }
+
+        EditorUtility.DisplayProgressBar(title, "正在收集...", 1.0f);
+        for(int i = 0; i< dependsAssets.Count; i++)
+        {
+            string assetName = dependsAssets[i];
+
+            if(assetDict.ContainsKey(assetName) || !CheckFileInvalid(assetName)) //资源已经包含了,或无效的
+            {
+                continue;
+            }
+            string abName = GetBundleName(assetName) + BundleExt;
+            if (!abDict.ContainsKey(abName))
+            {
+                abDict[abName] = new List<string>();
+            }
+
+            abDict[abName].Add(assetName);
+            assetDict[assetName] = true;
+        }
+
+        foreach(var kv in abDict)
+        {
+            AssetBundleBuild build = new AssetBundleBuild();
+            build.assetBundleName = kv.Key;
+            Debug.LogError("ab name :" + kv.Key);
+            foreach(var asset in kv.Value)
+            {
+                Debug.LogError("aset:" + asset);
+            }
+            build.assetNames = kv.Value.ToArray();
+            bundleList.Add(build);
+        }
+        EditorUtility.ClearProgressBar();
         return bundleList;
     }
 
     /// <summary>
-    /// 获取目录的bundle名字
+    /// 获取bundle名字
     /// </summary>
     /// <param name="dirPath"></param>
     /// <returns></returns>
     private static string GetBundleName(string dirPath)
     {
         string bundleName = dirPath.Replace("\\", "/");
+
+        if(File.Exists(bundleName)) //如果是文件
+        {
+            string dir = Path.GetDirectoryName(bundleName);
+            dir = dir.Replace("\\", "/");
+            bundleName = dir;
+        }
         return bundleName.ToLower();
     }
 
     /// <summary>
-    /// 检查文件的有效性，判断是否要打包
+    /// 检查文件的有效性，判断是否要打包, 待扩展，或者用配置表的方式
     /// </summary>
     /// <param name="path"></param>
     /// <returns></returns>
     private static bool CheckFileInvalid(string path)
     {
-        if(path.EndsWith(".meta"))
+        if(path.EndsWith(".meta") || path.EndsWith(".cs"))
         {
             return false;
         }
@@ -187,14 +292,27 @@ public class AssetBundleTool
         if(isRebuild)
         {
             if (Directory.Exists(BundleRealPath))
-                Directory.Delete(BundleRealPath);
+                DeleteDirectory(BundleRealPath);
         }
+
         if (!Directory.Exists(BundleRealPath))
         {
             Directory.CreateDirectory(BundleRealPath);
         }
     }
 
+    public static void DeleteDirectory(string dir)
+    {
+        if(Directory.Exists(dir))
+        {
+            Directory.Delete(dir, true);
+        }
+        string meta = string.Format("{0}.meta", dir);
+        if(File.Exists(meta))
+        {
+            File.Delete(meta);
+        }
+    }
     /// <summary>
     /// 获取构建的平台名字
     /// </summary>
