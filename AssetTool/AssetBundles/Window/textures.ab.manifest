@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2082090114
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 51509af0e87e0dbe8536dd886cfce69f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/textures/timg.jpg
+Dependencies: []

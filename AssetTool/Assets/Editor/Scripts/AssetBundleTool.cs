@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 using System.Text;
+using System.Security.Cryptography;
 
 public class AssetBundleTool
 {
@@ -15,6 +16,10 @@ public class AssetBundleTool
     public static string AssetName = "Assets";
     public static string configPath = "Assets/buildConfig.asset";
     public static string BundleExt = ".ab";
+    public static string ResourcesDirName = "Resources";
+    public static string DependsDir = "depends/";
+    public static string PlatformName = string.Empty;
+    public static string BundleListName = "Bundle_list.data";
 
     [MenuItem("AssetBundle/选择当前路径到copybuffer")]
     public static void CopySelectPath()
@@ -40,7 +45,9 @@ public class AssetBundleTool
         }
         var buildCfg = AssetDatabase.LoadAssetAtPath<BuildConfig>(configPath);
         buildCfg.buildPaths = pathList;
-        AssetDatabase.Refresh();
+        EditorUtility.SetDirty(buildCfg);
+        AssetDatabase.SaveAssets();
+        
     }
 
     [MenuItem("AssetBundle/设置选中的路径为收集依赖目录")]
@@ -56,17 +63,29 @@ public class AssetBundleTool
         }
         var buildCfg = AssetDatabase.LoadAssetAtPath<BuildConfig>(configPath);
         buildCfg.collectPaths = pathList;
-        AssetDatabase.Refresh();
+        EditorUtility.SetDirty(buildCfg);
+        AssetDatabase.SaveAssets();
     }
 
-    [MenuItem("AssetBundle/构建AssetBundle")]
-    public static bool BuildAssetBundle()
+    [MenuItem("AssetBundle/构建AssetBundle-非增量")]
+    public static void ReBuildAssetBundle()
     {
-        bool IsRebuild = true;
+        BuildAssetBundle(true);
+    }
+
+    [MenuItem("AssetBundle/构建AssetBundle-增量")]
+    public static void BuildAssetBundle()
+    {
+        BuildAssetBundle(false);
+    }
+
+    
+    private static bool BuildAssetBundle(bool isRebuild)
+    {
         BuildTarget buildTarget = EditorUserBuildSettings.activeBuildTarget;
-        string platformName = GetPlatformName(buildTarget);
-        BundleRealPath = BundleRealRootPath + "/" + platformName; //ab保存的完整目录
-        BuildAssetBundleSavePath(IsRebuild);
+        PlatformName = GetPlatformName(buildTarget);
+        BundleRealPath = BundleRealRootPath + "/" + PlatformName; //ab保存的完整目录
+        BuildAssetBundleSavePath(isRebuild);
         List<AssetBundleBuild> bundleList = new List<AssetBundleBuild>();
 
         var buildCfg = AssetDatabase.LoadAssetAtPath<BuildConfig>(configPath);
@@ -90,7 +109,7 @@ public class AssetBundleTool
         BuildAssetBundleOptions option = BuildAssetBundleOptions.ChunkBasedCompression |
                                          BuildAssetBundleOptions.IgnoreTypeTreeChanges |
                                          BuildAssetBundleOptions.DeterministicAssetBundle;
-        if(IsRebuild)
+        if(isRebuild)
         {
             option |= BuildAssetBundleOptions.ForceRebuildAssetBundle; //默认是增量打包的
         }
@@ -102,6 +121,7 @@ public class AssetBundleTool
             return false;
         }
 
+        CreateBundleList(manifest);
         return true;
     }
 
@@ -245,12 +265,41 @@ public class AssetBundleTool
     }
 
     /// <summary>
+    /// 根据manifest，生成bundlelist
+    /// </summary>
+    /// <param name="manifest"></param>
+    private static void CreateBundleList(AssetBundleManifest manifest)
+    {
+        //EditorUtility.DisplayProgressBar("生成bundlelist", "正在生成...", 0f);
+        AssetBundleList bundleLists = new AssetBundleList();
+        List<string> bundles = new List<string>(manifest.GetAllAssetBundles());
+        for(int i = 0; i< bundles.Count; i++)
+        {
+            Debug.LogError("bundles :" + bundles[i]);
+            string abFileName = bundles[i];
+            AssetBundleList.AssetBundleInfo bundleInfo = new AssetBundleList.AssetBundleInfo();
+            bundleInfo.FileName = abFileName;
+            bundleInfo.Md5Name = ConvertABNameToMd5(abFileName);
+
+            string[] dependsName = manifest.GetAllDependencies(abFileName); //记录下ab的依赖的ab的列表
+            bundleInfo.DependNames = dependsName;
+            bundleLists.BundleList.Add(bundleInfo);
+            EditorUtility.DisplayProgressBar("生成bundlelist", string.Format("正在生成 ...{0}/{1}", i, bundles.Count), i * 1.0f/ bundles.Count);
+        }
+        bundleLists.Platform = PlatformName;
+        bundleLists.TotalCount = bundles.Count;
+        EditorUtility.ClearProgressBar();
+
+    }
+
+    /// <summary>
     /// 获取bundle名字
     /// </summary>
     /// <param name="dirPath"></param>
     /// <returns></returns>
     private static string GetBundleName(string dirPath)
     {
+        string assetdir = "Assets/";
         string bundleName = dirPath.Replace("\\", "/");
 
         if(File.Exists(bundleName)) //如果是文件
@@ -259,7 +308,36 @@ public class AssetBundleTool
             dir = dir.Replace("\\", "/");
             bundleName = dir;
         }
+
+        int resourceIndex = bundleName.LastIndexOf(ResourcesDirName + "/"); //注意，要打包的资源，或者要查找依赖的根prefab都放在Resources目录下
+        if(resourceIndex != -1)
+        {
+            bundleName = bundleName.Substring(resourceIndex + ResourcesDirName.Length + 1);//Resources目录下的资源
+
+        }
+        else
+        {
+            bundleName = DependsDir + bundleName.Substring(assetdir.Length); //通过依赖找到的
+        }
         return bundleName.ToLower();
+    }
+
+    /// <summary>
+    /// ab的名字转换为md5, 可以用来缩短路径名，有时候目录太深了，名字会很长
+    /// </summary>
+    /// <param name="abName"></param>
+    /// <returns></returns>
+    private static string ConvertABNameToMd5(string abName)
+    {
+        byte[] bytes = Encoding.UTF8.GetBytes(abName);
+        MD5 md5 = new MD5CryptoServiceProvider();
+        byte[] res = md5.ComputeHash(bytes);
+        string md5Val = string.Empty;
+        foreach(var b in bytes)
+        {
+            md5Val += b.ToString("x2").ToLower();
+        }
+        return md5Val;
     }
 
     /// <summary>

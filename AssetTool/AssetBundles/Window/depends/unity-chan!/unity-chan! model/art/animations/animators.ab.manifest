@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 261548246
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 77317e2363709a07eb27a94eac1f6467
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/unity-chan!/Unity-chan! Model/Art/Animations/Animators/UnityChanARPose.controller
+Dependencies:
+- E:/unity_project/AssetTool/AssetTool/AssetBundles/Window/depends/unity-chan!/unity-chan!
+  model/art/animations/faceanimation.ab
+- E:/unity_project/AssetTool/AssetTool/AssetBundles/Window/depends/unity-chan!/unity-chan!
+  model/art/animations.ab

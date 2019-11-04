@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 768999262
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4febf09842c9fe02cb8d46991eacae3e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/atlas/sprite2/Flashlight_2.png
+- Assets/Resources/atlas/sprite2/Flashlight_1.png
+- Assets/Resources/atlas/sprite2/DeathSword.png
+- Assets/Resources/atlas/sprite2/Hacksaw.png
+- Assets/Resources/atlas/sprite2/Hammer.png
+- Assets/Resources/atlas/sprite2/Mallet.png
+- Assets/Resources/atlas/sprite2/BuildersTorch.png
+- Assets/Resources/atlas/sprite2/Flashlight_3.png
+- Assets/Resources/atlas/sprite2/Crowbar.png
+- Assets/Resources/atlas/sprite2/Axe.png
+- Assets/Resources/atlas/sprite2/IceAxe.png
+- Assets/Resources/atlas/sprite2/Clock.png
+- Assets/Resources/atlas/sprite2/Lantern.png
+- Assets/Resources/atlas/sprite2/Chainsaw.png
+- Assets/Resources/atlas/sprite2/DeathMallet.png
+- Assets/Resources/atlas/sprite2/FireExtinguisher.png
+Dependencies: []
