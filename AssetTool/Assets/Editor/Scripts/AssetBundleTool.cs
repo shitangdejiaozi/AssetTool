@@ -79,6 +79,36 @@ public class AssetBundleTool
         BuildAssetBundle(false);
     }
 
+    public static void SetBundelModeOpen(bool isBundle)
+    {
+        BuildTarget buildTarget = EditorUserBuildSettings.activeBuildTarget;
+        BuildTargetGroup targetGroup = BuildTargetGroup.Standalone;
+        if(buildTarget == BuildTarget.Android)
+        {
+            targetGroup = BuildTargetGroup.Android;
+        }
+        else if(buildTarget == BuildTarget.iOS)
+        {
+            targetGroup = BuildTargetGroup.iOS;
+        }
+        else if(buildTarget == BuildTarget.StandaloneWindows64)
+        {
+            targetGroup = BuildTargetGroup.Standalone;
+        }
+        string cursymbol = PlayerSettings.GetScriptingDefineSymbolsForGroup(targetGroup);
+        if(isBundle)
+        {
+            cursymbol += ";USE_ASSETBUNDLE";
+        }
+        else
+        {
+
+        }
+        PlayerSettings.SetScriptingDefineSymbolsForGroup(targetGroup, cursymbol);
+        
+
+
+    }
     
     private static bool BuildAssetBundle(bool isRebuild)
     {
@@ -289,9 +319,38 @@ public class AssetBundleTool
         bundleLists.Platform = PlatformName;
         bundleLists.TotalCount = bundles.Count;
         EditorUtility.ClearProgressBar();
-
+        SaveBundleList(bundleLists);
     }
 
+
+    private static void SaveBundleList(AssetBundleList bundleList)
+    {
+        string bundleListPath = BundleRealPath + "/" + BundleListName;
+        if (File.Exists(bundleListPath))
+            File.Delete(bundleListPath);
+        FileStream fs = new FileStream(bundleListPath, FileMode.Create);
+        if(fs != null)
+        {
+            bundleList.SaveToBinary(fs);
+        }
+    }
+    [MenuItem("AssetBundle/载入bundleList-测试")]
+    public static void LoadBundleList()
+    {
+        BuildTarget buildTarget = EditorUserBuildSettings.activeBuildTarget;
+        PlatformName = GetPlatformName(buildTarget);
+        BundleRealPath = BundleRealRootPath + "/" + PlatformName; //ab保存的完整目录
+        AssetBundleList info = new AssetBundleList();
+        string bundleListPath = BundleRealPath + "/" + BundleListName;
+        if(File.Exists(bundleListPath))
+        {
+            FileStream fs = new FileStream(bundleListPath, FileMode.Open);
+            if(fs != null)
+            {
+                info.LoadFromBinary(fs);
+            }
+        }
+    }
     /// <summary>
     /// 获取bundle名字
     /// </summary>
