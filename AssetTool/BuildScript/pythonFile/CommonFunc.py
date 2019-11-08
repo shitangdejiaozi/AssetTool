@@ -1,3 +1,4 @@
+#encoding=utf-8
 import os
 import sys
 import shutil
@@ -5,9 +6,25 @@ import shutil
 def createDir(dir):
     os.makedirs(dir)
 
+#会把软连接的源文件删除
 def delDir(dir):
     if os.path.exists(dir):
         shutil.rmtree(dir)
+    print "del dir" + dir
+
+def forceDelDir(dir):
+    if not os.path.exists(dir) :
+        return
+    dir =  dir.replace("/", os.sep)
+    cmd = "rd /s /q \"%s\"" % (dir)
+    os.system(cmd)
+
+def forceDelFile(file):
+    if not os.path.exists(file) :
+        return
+    file =  file.replace("/", os.sep)
+    cmd = "del \"%s\"" % (file)
+    os.system(cmd)
 
 def getDir(path):
     dir = os.path.dirname(path)
@@ -33,10 +50,10 @@ def linkDir(linkDir, destDir):
     if not os.path.exists(destDir):
         return
     dir = getDir(linkDir)
+    print destDir
     if not os.path.exists(dir):
         createDir(dir)
     cmd = "mklink /d \"%s\" \"%s\"" % (linkDir, destDir)
-    print cmd
     os.system(cmd)
 
 

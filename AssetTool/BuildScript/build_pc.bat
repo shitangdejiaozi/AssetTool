@@ -23,7 +23,7 @@ python %PYTHON_FILE%\ExportProj.py -srcProj %PROJECT_PATH% -destProj %EXPORT_PAT
 
 echo 导出项目完成
 echo -------------
-
+pause
 echo 开始打包
 %UNITY_PATH% -batchMode -nographics -quit -projectPath %EXPORT_PATH% -logFile %UNITY_LOG% -executeMethod BuildTool.BuildPCPackage BUILD_PATH=%BUILD_FILE%
 if not "%ERRORLEVEL%" == "0" goto FAIL rem 需要-quit，命令才结束

@@ -4,10 +4,22 @@ import CommonFunc
 
 LINK_FILE="build_link_list.txt"
 
-def clearDestProj(dest):
+def clearDestProj(dest, isClearLib):
     if not os.path.exists(dest) :
         return
-    CommonFunc.delDir(dest)
+    if isClearLib :
+        CommonFunc.forceDelDir(dest)
+    else :
+        dirs = os.listdir(dest)
+        for d in dirs :
+            if d != "Library" :
+                path = os.path.join(dest, d)
+                if os.path.isfile(path) :
+                    CommonFunc.forceDelFile(path)
+                else :
+                    CommonFunc.forceDelDir(path)
+
+
 
 
 def linkProj(srcProj, destProj):
@@ -23,7 +35,8 @@ def exportProj(srcProj, destProj, platform):
     if not os.path.exists(srcProj) :
         print "srcproj not exist"
         sys.exit(-1)
-    clearDestProj(destProj)
+    clearDestProj(destProj, True)
+    return
     linkProj(srcProj, destProj)
 
 if "__main__" == __name__ :
