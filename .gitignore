@@ -34,3 +34,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+#python工程
+AssetTool/BuildScript/pythonFile/venv
+AssetTool/BuildScript/pythonFile/.idea
+*.pyc

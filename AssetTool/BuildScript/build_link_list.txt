@@ -1,0 +1,4 @@
+Assets\Editor
+Assets\Scenes
+Assets\Scripts
+Assets\unity-chan!

@@ -1,10 +1,10 @@
 Initiating legacy licensing module
-LICENSE SYSTEM [2019116 17:47:49] Next license update check is after 2019-11-07T07:52:18
+LICENSE SYSTEM [2019118 11:32:5] Next license update check is after 2019-11-08T06:27:18
 
 Built from '2018.3/staging' branch; Version is '2018.3.14f1 (d0e9f15437b1) revision 13691377'; Using compiler version '191326128'
 OS: 'Windows 7  (6.1.0) 64bit' Language: 'zh' Physical Memory: 16263 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
-[Package Manager] Server::Start -- Port 56944 was selected
+[Package Manager] Server::Start -- Port 58538 was selected
 
  COMMAND LINE ARGUMENTS:
 D:\app\UnityPackage\2018.3.14f1\Editor\Unity.exe
@@ -12,17 +12,18 @@ D:\app\UnityPackage\2018.3.14f1\Editor\Unity.exe
 -nographics
 -quit
 -projectPath
-E:\unity_project\AssetTool\AssetTool
+E:\unity_project\AssetTool\AssetTool\BuildScript\ExprotPath
+rem
+导出的项目路径，用来打apk
 -logFile
 E:\unity_project\AssetTool\AssetTool\BuildScript\unity_pc_log.txt
 -executeMethod
 BuildTool.BuildPCPackage
-BUILD_PATH=E:\unity_project\AssetTool\AssetTool\BuildTest\AssetToolDemo.exe
-Successfully changed project path to: E:\unity_project\AssetTool\AssetTool
-E:/unity_project/AssetTool/AssetTool
+BUILD_PATH=E:\unity_project\AssetTool\AssetTool\Build\AssetToolDemo.exe
+Successfully changed project path to: E:\unity_project\AssetTool\AssetTool\BuildScript\ExprotPath
+E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath
 Using Asset Import Pipeline V1.
-Initiating legacy licensing moduleLoading GUID <-> Path mappings...0.000083 seconds
-Loading Asset Database...0.018386 seconds
+Initiating legacy licensing moduleRebuilding Library because the asset database could not be found!
 Build target: OSXUniversal found and added!
 Build target: WindowsStoreApps found and added!
 Build target: Win64 found and added!
@@ -51,24 +52,27 @@ Build target: N3DS found and added!
 Build target: WP8 found and added!
 Build target: SamsungTV found and added!
 Build target: Tizen found and added!
-AssetDatabase consistency checks...0.059577 seconds
-Refreshing native plugins compatible for Editor in 35.67 ms, found 2 plugins.
+Loading GUID <-> Path mappings...0.000121 seconds
+Loading Asset Database...0.000045 seconds
+AssetDatabase consistency checks...0.000831 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 DisplayProgressbar: Unity Package Manager
-[Package Manager] Done resolving packages in 0.22s seconds
+[Package Manager] Resetting packages to defaults dependencies was done successfully.
+[Package Manager] Done resolving packages in 0.98s seconds
 [Package Manager] Registering 36 packages:
 [Package Manager]  * Package :  com.unity.ads@2.0.8
-    (location: E:\unity_project\AssetTool\AssetTool\Library\PackageCache\com.unity.ads@2.0.8)
+    (location: E:\unity_project\AssetTool\AssetTool\BuildScript\ExprotPath\Library\PackageCache\com.unity.ads@2.0.8)
 [Package Manager]  * Package :  com.unity.analytics@3.2.2
-    (location: E:\unity_project\AssetTool\AssetTool\Library\PackageCache\com.unity.analytics@3.2.2)
+    (location: E:\unity_project\AssetTool\AssetTool\BuildScript\ExprotPath\Library\PackageCache\com.unity.analytics@3.2.2)
 [Package Manager]  * Package :  com.unity.collab-proxy@1.2.15
-    (location: E:\unity_project\AssetTool\AssetTool\Library\PackageCache\com.unity.collab-proxy@1.2.15)
+    (location: E:\unity_project\AssetTool\AssetTool\BuildScript\ExprotPath\Library\PackageCache\com.unity.collab-proxy@1.2.15)
 [Package Manager]  * Package :  com.unity.package-manager-ui@2.0.7
-    (location: E:\unity_project\AssetTool\AssetTool\Library\PackageCache\com.unity.package-manager-ui@2.0.7)
+    (location: E:\unity_project\AssetTool\AssetTool\BuildScript\ExprotPath\Library\PackageCache\com.unity.package-manager-ui@2.0.7)
 [Package Manager]  * Package :  com.unity.purchasing@2.0.3
-    (location: E:\unity_project\AssetTool\AssetTool\Library\PackageCache\com.unity.purchasing@2.0.3)
+    (location: E:\unity_project\AssetTool\AssetTool\BuildScript\ExprotPath\Library\PackageCache\com.unity.purchasing@2.0.3)
 [Package Manager]  * Package :  com.unity.textmeshpro@1.3.0
-    (location: E:\unity_project\AssetTool\AssetTool\Library\PackageCache\com.unity.textmeshpro@1.3.0)
+    (location: E:\unity_project\AssetTool\AssetTool\BuildScript\ExprotPath\Library\PackageCache\com.unity.textmeshpro@1.3.0)
 [Package Manager]  * Package :  com.unity.modules.ai@1.0.0
     (location: D:\app\UnityPackage\2018.3.14f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai)
 [Package Manager]  * Package :  com.unity.modules.animation@1.0.0
@@ -129,7 +133,7 @@ DisplayProgressbar: Unity Package Manager
     (location: D:\app\UnityPackage\2018.3.14f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind)
 [Package Manager]  * Package :  com.unity.modules.xr@1.0.0
     (location: D:\app\UnityPackage\2018.3.14f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr)
-[Package Manager] Done registering packages in 0.01s seconds
+[Package Manager] Done registering packages in 0.04s seconds
 Initialize engine version: 2018.3.14f1 (d0e9f15437b1)
 Forcing GfxDevice: Null
 GfxDevice: creating device client; threaded=0
@@ -139,40 +143,901 @@ NullGfxDevice:
     Vendor:   Unity Technologies
 [EnlightenBakeManager] m_Clear = false;
 WARNING: Shader Unsupported: 'Hidden/FrameDebuggerRenderTargetDisplay' - Pass '' has no vertex shader
+Shader 'Standard (Specular setup)': fallback shader 'VertexLit' not found
+Shader 'Standard': fallback shader 'VertexLit' not found
+Shader 'Autodesk Interactive': fallback shader 'VertexLit' not found
+Shader 'Nature/Tree Creator Bark': dependency 'OptimizedShader' shader 'Hidden/Nature/Tree Creator Bark Optimized' not found
+Shader 'Nature/Tree Creator Leaves': dependency 'OptimizedShader' shader 'Hidden/Nature/Tree Creator Leaves Optimized' not found
+Shader 'Nature/Tree Creator Leaves Fast': dependency 'OptimizedShader' shader 'Hidden/Nature/Tree Creator Leaves Fast Optimized' not found
+Shader 'UI/Unlit/Transparent': fallback shader 'UI/Default' not found
+WARNING: Shader Unsupported: 'UI/Unlit/Transparent' - Setting to default shader.
+Shader 'UI/Unlit/Text': fallback shader 'UI/Default Font' not found
+WARNING: Shader Unsupported: 'UI/Unlit/Text' - Setting to default shader.
 Initialize mono
 Mono path[0] = 'D:/app/UnityPackage/2018.3.14f1/Editor/Data/Managed'
 Mono path[1] = 'D:/app/UnityPackage/2018.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/app/UnityPackage/2018.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56012
 Begin MonoManager ReloadAssembly
-Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.01 ms, found 0 plugins.
 Initializing Unity.PackageManager (PackageManager) v2018.3.14 for Unity v2018.3.14f1
 Registering precompiled unity dll's ...
 Register platform support module: D:\app\UnityPackage\2018.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:\app\UnityPackage\2018.3.14f1\Editor\Data\PlaybackEngines\windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003771 seconds.
+Registered in 0.022651 seconds.
 Registering platform support modules:
-Registered platform support modules in: 0.0836403s.
+Registered platform support modules in: 0.1468314s.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 2.69 ms.
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.433 seconds
+- Completed reload, in  3.801 seconds
 Registering precompiled user dll's ...
-Registered in 0.073203 seconds.
+Registered in 0.041289 seconds.
 Platform modules already initialized, skipping
 Begin MonoManager ReloadAssembly
 Initializing Unity.PackageManager (PackageManager) v2018.3.14 for Unity v2018.3.14f1
 Registering platform support modules:
-Registered platform support modules in: 0.0460201s.
+Registered platform support modules in: 0.0387516s.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.31 ms.
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.228 seconds
+- Completed reload, in  0.992 seconds
 Platform modules already initialized, skipping
+Validating Project structure ... 0.000724 seconds.
+Shader import version has changed; will reimport all shaders...
+Upgrading shader files ...0.000786 seconds.
+Refresh: detecting if any assets need to be imported or removed ...
+
+Hashing assets (10 files)... 0.336 seconds
+  file read: 0.333 seconds (56.739 MB)
+  wait for write: 0.000 seconds (I/O thread blocked by consumer, aka CPU bound)
+  wait for read: 0.255 seconds (CPUT thread waiting for I/O thread, aka disk bound)
+  hash: 0.077 seconds
+----- Compute hash(es) for 10 asset(s).
+
+
+Hashing assets (375 files)... 0.076 seconds
+  file read: 0.018 seconds (19.549 MB)
+  wait for write: 0.002 seconds (I/O thread blocked by consumer, aka CPU bound)
+  wait for read: 0.037 seconds (CPUT thread waiting for I/O thread, aka disk bound)
+  hash: 0.027 seconds
+Updating Assets - GUID: 00000000000000001000000000000000...
+ done. [Time: 67.680498 ms] 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.6 MB.
+System memory in use after: 25.3 MB.
+
+Unloading 161 unused Assets to reduce memory usage. Loaded Objects now: 424.
+Total: 25.980531 ms (FindLiveObjects: 0.170658 ms CreateObjectMapping: 0.006610 ms MarkObjects: 2.817655 ms  DeleteObjects: 22.985007 ms)
+
+Updating Library/BuildPlayer.prefs - GUID: 00000000000000005000000000000000...
+ done. [Time: 12.488958 ms] 
+Updating Packages/com.unity.modules.tilemap - GUID: 09e28640d754a611467eebfb261ed749...
+ done. [Time: 4.833699 ms] 
+Updating Packages/com.unity.modules.animation - GUID: 1158e311a3101950348dcecb1bebc42d...
+ done. [Time: 5.137157 ms] 
+Updating Packages/com.unity.package-manager-ui - GUID: 13eb80ce50ac9c43cdbaf2109c0ec7db...
+ done. [Time: 4.541357 ms] 
+Updating Packages/com.unity.modules.vr - GUID: 178008567c08e6d84014fa87825d10bb...
+ done. [Time: 4.803654 ms] 
+Updating Packages/com.unity.ads - GUID: 17b632677410799367a53dc7ab96a8c2...
+ done. [Time: 6.605775 ms] 
+Updating Packages/com.unity.collab-proxy - GUID: 1adad61bfb44214ee3e887b5febc4396...
+ done. [Time: 5.256137 ms] 
+Updating Packages/com.unity.modules.vehicles - GUID: 1cf2469083ffa484da4d78dd70d708e8...
+ done. [Time: 4.483971 ms] 
+Updating Packages/com.unity.modules.uielements - GUID: 2808ba6bccb2478ec9c7209d8bf1f3cc...
+ done. [Time: 5.214674 ms] 
+Updating Packages/com.unity.modules.director - GUID: 2d142b475fbfb8cf12ba3a795194300a...
+ done. [Time: 4.574407 ms] 
+Updating Packages/com.unity.modules.audio - GUID: 2d6ba5cbe47e6ad3c87474c56174d4e0...
+ done. [Time: 4.988733 ms] 
+Updating Packages/com.unity.modules.physics2d - GUID: 376c84ea405e0f2b80562c23bb977216...
+ done. [Time: 5.478773 ms] 
+Updating Packages/com.unity.modules.unitywebrequestaudio - GUID: 38e3a8976f0b9c586b6dfbcef4e4066c...
+ done. [Time: 5.079770 ms] 
+Updating Packages/com.unity.modules.ui - GUID: 39728903e57c60021f80449a8bbc0096...
+ done. [Time: 5.775321 ms] 
+Updating Packages/com.unity.purchasing - GUID: 3f0c4389c854bcaf848af1ea310dbada...
+ done. [Time: 5.254334 ms] 
+Updating Packages/com.unity.modules.particlesystem - GUID: 48b10b41f58d5b49717f376cda59eeb8...
+ done. [Time: 4.836103 ms] 
+Updating Packages/com.unity.modules.xr - GUID: 515638b803bef8599dbd6d5c8bdaa53e...
+ done. [Time: 5.320434 ms] 
+Updating Packages/com.unity.modules.screencapture - GUID: 5469ef0820152a4ae45d400fdc4626e4...
+ done. [Time: 5.910525 ms] 
+Updating Packages/com.unity.analytics - GUID: 5c38c5679d98faa4ae7df9fae0a8226e...
+ done. [Time: 5.548779 ms] 
+Updating Packages/com.unity.modules.terrain - GUID: 6e1c8b97ec8aa0464e92506ffe099558...
+ done. [Time: 5.190638 ms] 
+Updating Packages/com.unity.modules.unitywebrequesttexture - GUID: 6f1c7ebc8ac78cb951be24c238cbd3ba...
+ done. [Time: 4.986029 ms] 
+Updating Packages/com.unity.modules.imageconversion - GUID: 850c54ee0b9e1aa740b1c67792eb1f26...
+ done. [Time: 5.738064 ms] 
+Assets/Scripts is a symbolic link. Using symlinks in Unity projects may cause your project to become corrupted if you create multiple references to the same asset, use recursive symlinks or use symlinks to share assets between projects used with different versions of Unity. Make sure you know what you are doing.
+ 
+(Filename: D:\unity\Modules/AssetDatabase/Editor/V1/AssetDatabaseV1.cpp Line: 950)
+
+Updating Assets/Scripts - GUID: 8d3d0e05f5d6be847bb71995fff95e3a...
+ done. [Time: 43.862933 ms] 
+Updating Packages/com.unity.modules.terrainphysics - GUID: 95f85adeda79e994f011eb2152cf4fc9...
+ done. [Time: 4.413965 ms] 
+Updating Packages/com.unity.modules.umbra - GUID: 9c7c268fa6492449654839df69f2a2f4...
+ done. [Time: 4.666346 ms] 
+Assets/Editor is a symbolic link. Using symlinks in Unity projects may cause your project to become corrupted if you create multiple references to the same asset, use recursive symlinks or use symlinks to share assets between projects used with different versions of Unity. Make sure you know what you are doing.
+ 
+(Filename: D:\unity\Modules/AssetDatabase/Editor/V1/AssetDatabaseV1.cpp Line: 950)
+
+Updating Assets/Editor - GUID: a5b2d42a562eb874bb2b31737a0530d9...
+ done. [Time: 7.132770 ms] 
+Updating Packages/com.unity.modules.assetbundle - GUID: b219c86ce508e478367c0a46e1aa9fe4...
+ done. [Time: 5.518433 ms] 
+Updating Packages/com.unity.modules.wind - GUID: b77b1ad9c05af0412725856c6c53b037...
+ done. [Time: 4.897095 ms] 
+Assets/Scenes is a symbolic link. Using symlinks in Unity projects may cause your project to become corrupted if you create multiple references to the same asset, use recursive symlinks or use symlinks to share assets between projects used with different versions of Unity. Make sure you know what you are doing.
+ 
+(Filename: D:\unity\Modules/AssetDatabase/Editor/V1/AssetDatabaseV1.cpp Line: 950)
+
+Updating Assets/Scenes - GUID: b9794ff6636e2744492e4844acc28ce9...
+ done. [Time: 6.650843 ms] 
+Updating Packages/com.unity.modules.imgui - GUID: c060426bfd6e82575228df6656368eaa...
+ done. [Time: 4.907310 ms] 
+Updating Packages/com.unity.modules.cloth - GUID: c4df1124e2787ee0c8d1a911de17ee73...
+ done. [Time: 5.586936 ms] 
+Updating Packages/com.unity.modules.unitywebrequest - GUID: c522a644a29fcab2eaf63298c118a65b...
+ done. [Time: 5.123637 ms] 
+Assets/unity-chan! is a symbolic link. Using symlinks in Unity projects may cause your project to become corrupted if you create multiple references to the same asset, use recursive symlinks or use symlinks to share assets between projects used with different versions of Unity. Make sure you know what you are doing.
+ 
+(Filename: D:\unity\Modules/AssetDatabase/Editor/V1/AssetDatabaseV1.cpp Line: 950)
+
+Updating Assets/unity-chan! - GUID: ca8e61f06d8348b47b6562a4c33448d6...
+ done. [Time: 7.463270 ms] 
+Updating Packages/com.unity.textmeshpro - GUID: cabaa672b0e3ee91fa7b6da4daab7970...
+ done. [Time: 4.899498 ms] 
+Updating Packages/com.unity.modules.unitywebrequestassetbundle - GUID: d5f0b0adc6826e9dd3b72e292e8438be...
+ done. [Time: 5.339963 ms] 
+Updating Packages/com.unity.modules.unityanalytics - GUID: d6c6a000a805f00649b36b542e8426c2...
+ done. [Time: 5.037406 ms] 
+Updating Packages/com.unity.modules.physics - GUID: d6db7caf2e852b75ebb9c6098418179c...
+ done. [Time: 4.481868 ms] 
+Updating Packages/com.unity.modules.unitywebrequestwww - GUID: dcc8c6e92b172a65719af5ddf47dd968...
+ done. [Time: 4.661539 ms] 
+Updating Packages/com.unity.modules.video - GUID: ede0462698a4a5643aa9872c074acd38...
+ done. [Time: 4.983926 ms] 
+Updating Packages/com.unity.modules.jsonserialize - GUID: fc3a810351931f5e6183e16b9beb5563...
+ done. [Time: 4.622179 ms] 
+Updating Packages/com.unity.modules.ai - GUID: fd871a8be47119612f7c254e96a822b7...
+ done. [Time: 4.798245 ms] 
+Updating Packages/com.unity.collab-proxy/Tests - GUID: 1369382d2c5e64dc5b2ec0b6b0a94531...
+ done. [Time: 6.845236 ms] 
+Updating Packages/com.unity.textmeshpro/Tests - GUID: 2ce4bbcc4722440890a03312706037fe...
+ done. [Time: 6.627107 ms] 
+Updating Packages/com.unity.purchasing/Documentation - GUID: 30aa3194afbe44a72aa7ec76cb2bab8a...
+ done. [Time: 6.261455 ms] 
+Updating Packages/com.unity.analytics/Unity.Analytics.StandardEvents.dll.mdb - GUID: 36e8bb3feb5e6402185947b817a6ed8d...
+ done. [Time: 65.495598 ms] 
+Updating Packages/com.unity.ads/UnityEngine.Advertisements.dll.mdb - GUID: 5e57a6c62c1ec47d0bceb70495845164...
+ done. [Time: 4.936154 ms] 
+Updating Packages/com.unity.textmeshpro/Package Resources - GUID: 5ec95f4d5b2d1f14e9ff8682562553f9...
+ done. [Time: 5.932458 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor - GUID: 797cf0c5f1b7e4e1ab17481bd9b698eb...
+ done. [Time: 5.781029 ms] 
+Updating Packages/com.unity.analytics/Tests - GUID: 7a573b834e2608c4f982daf527bdb47a...
+ done. [Time: 5.651834 ms] 
+Updating Packages/com.unity.analytics/Editor - GUID: 7fd5e77e7e7ea4eea8198138cd9cc814...
+ done. [Time: 5.516630 ms] 
+Updating Packages/com.unity.purchasing/UnityEngine.Purchasing.dll.mdb - GUID: 86c18994495874297b469aaa57ef9b44...
+ done. [Time: 5.367605 ms] 
+Updating Packages/com.unity.analytics/DataPrivacy - GUID: 8aafd27f78c12564281bac0d0067df8d...
+ done. [Time: 5.144368 ms] 
+Updating Packages/com.unity.ads/Editor - GUID: a37e18887fa954edf92bc36bc353b879...
+ done. [Time: 5.582129 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests - GUID: ab866bd39382069418f5c179c1e1ab3e...
+ done. [Time: 5.981132 ms] 
+Updating Packages/com.unity.textmeshpro/Plugins - GUID: b181a174758843d998af1f275856d318...
+ done. [Time: 5.048223 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources - GUID: d1a0a27327b54c3bac52a08929c33f81...
+ done. [Time: 6.025298 ms] 
+Updating Packages/com.unity.collab-proxy/Editor - GUID: d31e5d760880a4e52a3a75322481d0d2...
+ done. [Time: 6.321245 ms] 
+Updating Packages/com.unity.analytics/Unity.Analytics.Tracker.dll.mdb - GUID: d607a67dc772b484da060e66a3d61a4e...
+ done. [Time: 5.204158 ms] 
+Updating Packages/com.unity.purchasing/Editor - GUID: d929147d9f78c487397abb40f2c257b0...
+ done. [Time: 5.338461 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts - GUID: e6a1d1e3d2384453a7371b4a07a41ca4...
+ done. [Time: 6.679085 ms] 
+Updating Packages/com.unity.textmeshpro/Documentation - GUID: f4845225cf0e4acfab0f1903ff872bc9...
+ done. [Time: 6.332061 ms] 
+Updating Packages/com.unity.analytics/Unity.Analytics.Editor.dll.mdb - GUID: fec197bad419341558f81f2ec8a05e18...
+ done. [Time: 5.797855 ms] 
+Updating Packages/com.unity.textmeshpro/Tests/Editor - GUID: 28542eca5f1b4c64813acfbd512524b6...
+ done. [Time: 5.186732 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources - GUID: 3c61c79a991f84470843243e9710743e...
+ done. [Time: 4.731545 ms] 
+Updating Packages/com.unity.collab-proxy/Tests/Editor - GUID: 4506ac79f5b274cb1b249ed7f4abfb9a...
+ done. [Time: 5.054532 ms] 
+Updating Packages/com.unity.analytics/Tests/Runtime - GUID: 4f5362359d4548b44a34a45f19efb4bf...
+ done. [Time: 4.853829 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime - GUID: 5fc988a1d5b04aee9a5222502b201a45...
+ done. [Time: 5.327344 ms] 
+Updating Packages/com.unity.ads/Editor/UnityEditor.Advertisements.dll.mdb - GUID: 6597c6ea86d36477081342001145d8d9...
+ done. [Time: 5.173812 ms] 
+Updating Packages/com.unity.ads/Editor/Resources - GUID: 7c3a5d6e39b874f468b2691537168513...
+ done. [Time: 5.652135 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor - GUID: 931f3395378214a6c94333853bd0659b...
+ done. [Time: 5.225190 ms] 
+Updating Packages/com.unity.purchasing/Editor/UnityEditor.Purchasing.dll.mdb - GUID: 9de9e8523c82543c5b3e40a4b51aa2c9...
+ done. [Time: 5.577322 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Resources - GUID: a6ab6fd2b91214e8a9c8ec2224a528de...
+ done. [Time: 6.398161 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources - GUID: b0c12f0066bd444a1b3a900679169f30...
+ done. [Time: 6.584142 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor - GUID: b5d6c28ed7b94775be9e2560f300247c...
+ done. [Time: 6.710333 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor - GUID: bac185a28e198c1419b649ca946942ea...
+ done. [Time: 6.241324 ms] 
+Updating Packages/com.unity.textmeshpro/Package Resources/TMP Examples & Extras.unitypackage - GUID: bc00e25696e4132499f56528d3fed2e3...
+ done. [Time: 8.982964 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab - GUID: c18cb9388313e4287ad5895ee735c47d...
+ done. [Time: 5.787940 ms] 
+Updating Packages/com.unity.textmeshpro/Package Resources/TMP Essential Resources.unitypackage - GUID: ce4ff17ca867d2b48b5c8a4181611901...
+ done. [Time: 5.251029 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Gizmos - GUID: e93ec7eb6de342aabd156833e253f838...
+ done. [Time: 4.847219 ms] 
+Updating Packages/com.unity.textmeshpro/Plugins/64 Bit Plugins - GUID: f0fec68172b84dae8d5407bc0702a509...
+ done. [Time: 5.425893 ms] 
+Updating Packages/com.unity.textmeshpro/Tests/Runtime - GUID: f5600e6ae5a1464da659eca36bef9d64...
+ done. [Time: 5.825196 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures - GUID: f8e6a2d47aba4c6c9b3c5a72d9f48da5...
+ done. [Time: 7.086200 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services - GUID: 005c4d80949154e5c87348bb9f5d15eb...
+ done. [Time: 6.844335 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/External - GUID: 06b575597b644fe8ba88495149d01b66...
+ done. [Time: 5.423189 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates - GUID: 1cf679539c5e5499e8856aaacf1fc32f...
+ done. [Time: 5.507917 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI - GUID: 301fbaa0e62e44fd2a7383bd338a2898...
+ done. [Time: 5.105910 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/Android - GUID: 48986928cc2a449dbaecdd1654bc9bf6...
+ done. [Time: 6.054142 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS - GUID: 4f234578336894dc081edf696f2ff5f2...
+ done. [Time: 6.774930 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Resources/Styles - GUID: 6b1ae1e78552c459d9ce27048ff51c7f...
+ done. [Time: 5.321936 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/UI - GUID: 7b87dac66d6e74d5f848d26f169bbe89...
+ done. [Time: 5.429198 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Common - GUID: 87738e82a4f047cc947cff8a2ccea594...
+ done. [Time: 5.165400 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/Editor - GUID: 99ddb49592ff84811804420a1910cb89...
+ done. [Time: 5.313523 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services - GUID: afd7697844f4142f9aa91471c1fba506...
+ done. [Time: 5.335156 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents - GUID: b6295675042094715ad9cc104210aeb7...
+ done. [Time: 6.137067 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Presenters - GUID: d437fe60bb34f45728664a5d930c1635...
+ done. [Time: 6.088393 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images - GUID: da0b41deddf0a4414b09681018c171f1...
+ done. [Time: 6.100412 ms] 
+Updating Packages/com.unity.analytics/Tests/Runtime/DataPrivacy - GUID: f2233ba26b028cc4b9e58681e7a22dac...
+ done. [Time: 6.460055 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views - GUID: fd0a39b4d296d4d509b4f1dbd08d0630...
+ done. [Time: 6.151489 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Styles - GUID: fe684bbd80eab45778b9eb316893ff7c...
+ done. [Time: 5.233302 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Common - GUID: 1067213df0c64b319bc81e73be809b1a...
+ done. [Time: 5.303008 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds - GUID: 2d4d46c70fdd242668a56e99799e8540...
+ done. [Time: 4.901601 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Interfaces - GUID: 3385f7527e5be4c65b3a5294e8995ff8...
+ done. [Time: 5.952288 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/UIElementsSchema - GUID: 3a2bf0128e2dd664f91dfba49e36a012...
+ done. [Time: 6.530661 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/Common - GUID: 42064bc130be4c44b288d249a44b356f...
+ done. [Time: 6.247333 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Upm - GUID: 669717f3193a457b9bad9665ebcae836...
+ done. [Time: 5.834510 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Styles/Main_Dark.scss - GUID: 880f2fc52037c4fe09edb80cfe84ac7c...
+ done. [Time: 10.387886 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images/Dark - GUID: 8c25f8b5c9da143328c516248414b95d...
+ done. [Time: 5.013370 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images/Light - GUID: 907731821455c4fa989ac14278e02251...
+ done. [Time: 6.072469 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/Interfaces - GUID: bfd715cd54ab84c22b128149c12b516c...
+ done. [Time: 5.070757 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Styles/_common.scss - GUID: e45f79867376940b7ba31502238d8efa...
+ done. [Time: 5.647928 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages - GUID: e53bc96d2d054b8cbc811f0d73e761eb...
+ done. [Time: 6.005468 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Styles/Main_Light.scss - GUID: f1687bb24464840ae9e1d253685ae0f6...
+ done. [Time: 6.005168 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/Android/builds - GUID: f28fcced5af094cf78eb4e1109a71981...
+ done. [Time: 6.607277 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Packages - GUID: f68d88b9933cd4204925b22192bf15b4...
+ done. [Time: 6.177328 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Mock - GUID: f851ca8f9604f442aafccf60a6713ce9...
+ done. [Time: 6.526455 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/UIElementsSchema/UnityEditor.PackageManager.UI.xsd - GUID: 3abc8faab9f5cbe4db0336c99fef85ca...
+ done. [Time: 9.783373 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/UIElementsSchema/UIElements.xsd - GUID: 7d22934bf84ccd14082fd2d5a9f5951e...
+ done. [Time: 6.379533 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/UIElementsSchema/UnityEditor.Experimental.UIElements.xsd - GUID: 86d0242b70e6ab24aaf5a0e67edf2a61...
+ done. [Time: 6.827510 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/UIElementsSchema/UnityEngine.Experimental.UIElements.xsd - GUID: 9da568db70dafa345a908282554b3672...
+ done. [Time: 6.679085 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework - GUID: eeed6954b3c264ca0b28a92aa6289bf0...
+ done. [Time: 8.912057 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Modules - GUID: 3cebe1a96232b44388b30b2f72dde434...
+ done. [Time: 5.758796 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers - GUID: 6e7c8cfeedae74eb3a562055e069e441...
+ done. [Time: 5.899108 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Info.plist - GUID: cc1b50b5501f748da8bec762294d9136...
+ done. [Time: 7.266172 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/UnityAds - GUID: d1c1a2d988f5148fd9ab17b2460d271e...
+ done. [Time: 5.110417 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers/UADSJsonStorage.h - GUID: 1322fd896bbb15bb6e335591b766ae62...
+ done. [Time: 12.025659 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers/UADSPlayerMetaData.h - GUID: 453f100e6bdae4dfd9e655927819dc85...
+ done. [Time: 6.298711 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers/UADSInAppPurchaseMetaData.h - GUID: 7927683d1fc5848b5abfb54ebb1028ec...
+ done. [Time: 5.948382 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers/UADSMetaData.h - GUID: 86c008322e7c647149878156c5b81940...
+ done. [Time: 5.640417 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers/UnityAdsExtended.h - GUID: a6842a74831964edc8fefa1c0aed89dc...
+ done. [Time: 6.293603 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers/UADSMediationMetaData.h - GUID: b52e557db2c2b4eebb10444f1d582029...
+ done. [Time: 6.179731 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Modules/module.modulemap - GUID: c5ba7626a737840ff88a3bd84b100482...
+ done. [Time: 7.437130 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers/UnityAds.h - GUID: c99bfe4fc4e5c4dc3917c14075acd117...
+ done. [Time: 5.368206 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/iOS/builds/UnityAds.framework/Headers/UnityAdsUnityDelegate.h - GUID: ce4395ccdb12cf62fca756358be1a892...
+ done. [Time: 5.878977 ms] 
+Updating Packages/com.unity.analytics/Unity.Analytics.Tracker.dll - GUID: 220224b43fc464c28bc0e8de8f54a432...
+ done. [Time: 211.720698 ms] 
+Updating Packages/com.unity.analytics/Unity.Analytics.Editor.dll - GUID: 224ede67b4f3a4109bfec4d5cb161b05...
+ done. [Time: 124.336148 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll - GUID: 3a84de5cd0624681b6b6dcd8921d912a...
+ done. [Time: 47.017096 ms] 
+Updating Packages/com.unity.ads/UnityEngine.Advertisements.dll - GUID: 3b07d432cba2a4c4f8a2fdea984620b8...
+ done. [Time: 59.471502 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/portable/nunit.framework.dll - GUID: 405b9b51bb344a128608d968297df79c...
+ done. [Time: 83.098879 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll - GUID: 4113173d5e95493ab8765d7b08371de4...
+ done. [Time: 102.437581 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll - GUID: 4a3ecb1425d14502837abea459cf2b70...
+ done. [Time: 72.034372 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll - GUID: 4b3fa4bde7f1451a8218c03ee6a8ded8...
+ done. [Time: 47.108133 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll - GUID: 4ba2329b63d54f0187bcaa12486b1b0f...
+ done. [Time: 24.141153 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll - GUID: 53ebcfaa2e1e4e2dbc85882cd5a73fa1...
+ done. [Time: 63.289968 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll - GUID: 5f32cd94baa94578a686d4b9d6b660f7...
+ done. [Time: 78.225821 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Timeline/Runtime/UnityEngine.Timeline.dll - GUID: 6a10b2909283487f913b00d94cd3faf5...
+ done. [Time: 73.572094 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll - GUID: 7668179ede524d6396c8b7d84461ea29...
+ done. [Time: 109.529790 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll - GUID: 80a3616ca19596e4da0f10f14d241e9f...
+ done. [Time: 88.636241 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll - GUID: 844f815391db42d49455cbf1a7bfc434...
+ done. [Time: 68.876003 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll - GUID: 870353891bb340e2b2a9c8707e7419ba...
+ done. [Time: 77.636631 ms] 
+Updating Packages/com.unity.ads/Editor/UnityEditor.Advertisements.dll - GUID: a342381d77833427fa10621e38fbae10...
+ done. [Time: 23.823574 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll - GUID: b5da970776034f77a070d99423d68791...
+ done. [Time: 68.915663 ms] 
+Updating Packages/com.unity.purchasing/UnityEngine.Purchasing.dll - GUID: b5f4343795a0e4626ac1fe4a9e6fce59...
+ done. [Time: 49.856984 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Networking/Standalone/UnityEngine.Networking.dll - GUID: dc443db3e92b4983b9738c1131f555cb...
+ done. [Time: 81.549139 ms] 
+Updating Packages/com.unity.analytics/Unity.Analytics.StandardEvents.dll - GUID: dce91326f102345f3ba2f0987c0679c2...
+ done. [Time: 39.797194 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Runtime/UnityEngine.GoogleAudioSpatializer.dll - GUID: e4f4cf1b9b434137a499903a7a1d651a...
+ done. [Time: 64.035093 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll - GUID: ead147da21254ff9a0a936bdd75e1680...
+ done. [Time: 64.269747 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Runtime/UnityEngine.SpatialTracking.dll - GUID: ed7343f30e3843b3afda8f8b02669cea...
+ done. [Time: 41.040772 ms] 
+Updating Packages/com.unity.purchasing/Editor/UnityEditor.Purchasing.dll - GUID: f1045c695c5bf4fb7b8509687bc60fc0...
+ done. [Time: 22.698375 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll - GUID: f5f67c52d1564df4a8936ccd202a3bd8...
+ done. [Time: 88.841451 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/GUISystem/Standalone/UnityEngine.UI.dll - GUID: f70555f144d8491a825f0804e09c671c...
+ done. [Time: 92.174083 ms] 
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Initializing Unity.PackageManager (PackageManager) v2018.3.14 for Unity v2018.3.14f1
+Registering platform support modules:
+Registered platform support modules in: 0.0384818s.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.178 seconds
+Platform modules already initialized, skipping
+Script Compilation Pipeline Post Process Assets time: 1.278271s
+Filename: D:\app\UnityPackage\2018.3.14f1\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Arguments: D:/app/UnityPackage/2018.3.14f1/Editor/Data/Tools/ScriptUpdater/AssemblyUpdater.exe  --timestamp 637088095407241516  --api-version 2018.3.14f1 --check-update-required -a E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll -s "D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed,+D:/app/UnityPackage/2018.3.14f1/Editor/Data\UnityExtensions/Unity,+E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Assets" D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Standalone/UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Editor/UnityEditor.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\Editor/UnityEditor.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\net35/unity-custom/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\portable/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Runtime/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Editor/UnityEditor.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Standalone/UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Editor/UnityEditor.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Editor/UnityEditor.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Runtime/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Editor/UnityEditor.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Runtime/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\RuntimeEditor/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityVR\Editor/UnityEditor.VR.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEngine.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEditor.dll --nuget-path "D:/app/UnityPackage/2018.3.14f1/Editor/Data\Tools\NuGet.exe"
+index: -1
+
+Filename: D:\app\UnityPackage\2018.3.14f1\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Arguments: D:/app/UnityPackage/2018.3.14f1/Editor/Data/Tools/ScriptUpdater/AssemblyUpdater.exe  --timestamp 637088095424761516  --api-version 2018.3.14f1 --check-update-required -a E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll -s "D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed,+D:/app/UnityPackage/2018.3.14f1/Editor/Data\UnityExtensions/Unity,+E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Assets" D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Standalone/UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Editor/UnityEditor.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\Editor/UnityEditor.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\net35/unity-custom/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\portable/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Runtime/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Editor/UnityEditor.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Standalone/UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Editor/UnityEditor.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Editor/UnityEditor.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Runtime/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Editor/UnityEditor.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Runtime/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\RuntimeEditor/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityVR\Editor/UnityEditor.VR.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEngine.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEditor.dll --nuget-path "D:/app/UnityPackage/2018.3.14f1/Editor/Data\Tools\NuGet.exe"
+index: -1
+
+Filename: D:\app\UnityPackage\2018.3.14f1\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Arguments: D:/app/UnityPackage/2018.3.14f1/Editor/Data/Tools/ScriptUpdater/AssemblyUpdater.exe  --timestamp 637088095433566516  --api-version 2018.3.14f1 --check-update-required -a E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll -s "D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed,+D:/app/UnityPackage/2018.3.14f1/Editor/Data\UnityExtensions/Unity,+E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Assets" D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Standalone/UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Editor/UnityEditor.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\Editor/UnityEditor.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\net35/unity-custom/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\portable/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Runtime/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Editor/UnityEditor.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Standalone/UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Editor/UnityEditor.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Editor/UnityEditor.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Runtime/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Editor/UnityEditor.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Runtime/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\RuntimeEditor/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityVR\Editor/UnityEditor.VR.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEngine.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEditor.dll --nuget-path "D:/app/UnityPackage/2018.3.14f1/Editor/Data\Tools\NuGet.exe"
+index: -1
+
+Filename: D:\app\UnityPackage\2018.3.14f1\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Arguments: D:/app/UnityPackage/2018.3.14f1/Editor/Data/Tools/ScriptUpdater/AssemblyUpdater.exe  --timestamp 637088095445086516  --api-version 2018.3.14f1 --check-update-required -a E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll -s "D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed,+D:/app/UnityPackage/2018.3.14f1/Editor/Data\UnityExtensions/Unity,+E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Assets" D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Standalone/UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Editor/UnityEditor.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\Editor/UnityEditor.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\net35/unity-custom/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\portable/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Runtime/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Editor/UnityEditor.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Standalone/UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Editor/UnityEditor.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Editor/UnityEditor.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Runtime/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Editor/UnityEditor.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Runtime/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\RuntimeEditor/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityVR\Editor/UnityEditor.VR.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEngine.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEditor.dll --nuget-path "D:/app/UnityPackage/2018.3.14f1/Editor/Data\Tools\NuGet.exe"
+index: -1
+
+Filename: D:\app\UnityPackage\2018.3.14f1\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Arguments: D:/app/UnityPackage/2018.3.14f1/Editor/Data/Tools/ScriptUpdater/AssemblyUpdater.exe  --timestamp 637088095455341516  --api-version 2018.3.14f1 --check-update-required -a E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll -s "D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed,+D:/app/UnityPackage/2018.3.14f1/Editor/Data\UnityExtensions/Unity,+E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Assets" D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Standalone/UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Editor/UnityEditor.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\Editor/UnityEditor.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\net35/unity-custom/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\portable/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Runtime/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Editor/UnityEditor.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Standalone/UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Editor/UnityEditor.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Editor/UnityEditor.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Runtime/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Editor/UnityEditor.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Runtime/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\RuntimeEditor/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityVR\Editor/UnityEditor.VR.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEngine.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEditor.dll --nuget-path "D:/app/UnityPackage/2018.3.14f1/Editor/Data\Tools\NuGet.exe"
+index: -1
+
+Filename: D:\app\UnityPackage\2018.3.14f1\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Arguments: D:/app/UnityPackage/2018.3.14f1/Editor/Data/Tools/ScriptUpdater/AssemblyUpdater.exe  --timestamp 637088095480911516  --api-version 2018.3.14f1 --check-update-required -a E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll -s "D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed,+D:/app/UnityPackage/2018.3.14f1/Editor/Data\UnityExtensions/Unity,+E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Assets" D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Standalone/UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Editor/UnityEditor.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\Editor/UnityEditor.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\net35/unity-custom/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\portable/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Runtime/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Editor/UnityEditor.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Standalone/UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Editor/UnityEditor.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Editor/UnityEditor.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Runtime/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Editor/UnityEditor.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Runtime/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\RuntimeEditor/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityVR\Editor/UnityEditor.VR.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEngine.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEditor.dll --nuget-path "D:/app/UnityPackage/2018.3.14f1/Editor/Data\Tools\NuGet.exe"
+index: -1
+
+Filename: D:\app\UnityPackage\2018.3.14f1\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Arguments: D:/app/UnityPackage/2018.3.14f1/Editor/Data/Tools/ScriptUpdater/AssemblyUpdater.exe  --timestamp 637088095495031516  --api-version 2018.3.14f1 --check-update-required -a E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll -s "D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed,+D:/app/UnityPackage/2018.3.14f1/Editor/Data\UnityExtensions/Unity,+E:/unity_project/AssetTool/AssetTool/BuildScript/ExprotPath/Assets" D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Standalone/UnityEngine.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\GUISystem\Editor/UnityEditor.UI.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\Editor/UnityEditor.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\net35/unity-custom/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\TestRunner\portable/nunit.framework.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Runtime/UnityEngine.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Timeline\Editor/UnityEditor.Timeline.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Standalone/UnityEngine.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\Networking\Editor/UnityEditor.Networking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Editor/UnityEditor.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\Runtime/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Editor/UnityEditor.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\Runtime/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\RuntimeEditor/UnityEngine.SpatialTracking.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\UnityExtensions\Unity\UnityVR\Editor/UnityEditor.VR.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEngine.dll D:\app\UnityPackage\2018.3.14f1\Editor\Data\Managed\UnityEditor.dll --nuget-path "D:/app/UnityPackage/2018.3.14f1/Editor/Data\Tools\NuGet.exe"
+index: -1
+
+Assembly Updater Post Process Assets time: 10.191483s
+Updating Packages/com.unity.analytics/Tests/Runtime/DataPrivacy/Unity.Analytics.DataPrivacy.Tests.asmdef - GUID: 015812e983113a84b95773e55f3cec13...
+ done. [Time: 49.498843 ms] 
+Updating Packages/com.unity.analytics/DataPrivacy/Unity.Analytics.DataPrivacy.asmdef - GUID: 0fda7ebe61ab2164383d10e32efb9c6e...
+ done. [Time: 8.684914 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Unity.PackageManagerUI.Editor.asmdef - GUID: 15a615c733aa240909fe0b28b0d5143c...
+ done. [Time: 11.035363 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Unity.PackageManagerUI.EditorTests.asmdef - GUID: 5afb9687033af4bca957216add3fe854...
+ done. [Time: 7.710242 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/Unity.TextMeshPro.asmdef - GUID: 6055be8ebefd69e48b49212b09b47b2f...
+ done. [Time: 6.532164 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Unity.CollabProxy.Editor.asmdef - GUID: 645165c8169474bfbbeb8fb0bcfd26f5...
+ done. [Time: 5.815882 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/Unity.TextMeshPro.Editor.asmdef - GUID: 6546d7765b4165b40850b3667f981c26...
+ done. [Time: 6.688700 ms] 
+Updating Packages/com.unity.textmeshpro/Tests/Editor/Unity.TextMeshPro.Editor.Tests.asmdef - GUID: 656e461844099ae43a609ff6109b0877...
+ done. [Time: 8.698435 ms] 
+Updating Packages/com.unity.collab-proxy/Tests/Editor/Unity.CollabProxy.EditorTests.asmdef - GUID: 782de34c17796430ba8d0ceddb60944e...
+ done. [Time: 6.842232 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/Unity.Analytics.StandardEvents.EditorTests.asmdef - GUID: adee0c1377ef8b2489060e152dd0d119...
+ done. [Time: 11.961061 ms] 
+Updating Packages/com.unity.textmeshpro/Tests/Runtime/Unity.TextMeshPro.Tests.asmdef - GUID: bb05cab7d802aa5468f8f2f86840d984...
+ done. [Time: 5.686086 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/ItemSpentTests.cs - GUID: 00ed25e3298ac440eb327c706a964e3a...
+ done. [Time: 22.186101 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Packages/PackageCollectionTests.cs - GUID: 01cd264c206ae482393dc9d04b26eca0...
+ done. [Time: 9.787579 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/BuildStatusButton.cs - GUID: 0217a80286f79419daa202f69409f19b...
+ done. [Time: 9.590482 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMPro_TextContainerEditor.cs - GUID: 02893ffb522b490a9fa28eedd2584309...
+ done. [Time: 13.239492 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/LevelFailTests.cs - GUID: 036d03e26977243fa9a2d7af48e51e08...
+ done. [Time: 11.061803 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_SettingsEditor.cs - GUID: 0386b6eb838c47138cd51d1c1b879a35...
+ done. [Time: 16.908632 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageFilter.cs - GUID: 03ffb9844f8d40e8a2f59dd2aff561eb...
+ done. [Time: 7.069074 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SubMeshUI.cs - GUID: 058cba836c1846c3aa1c5fd2e28aea77...
+ done. [Time: 14.729141 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/UI/PackageManagerWindowTests.cs - GUID: 063b1587caa4a47f396741f4e69d108c...
+ done. [Time: 9.023526 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/Common/LoadingSpinner.cs - GUID: 06f8e3404d534cab82fe852ff33dad77...
+ done. [Time: 8.245350 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SubMesh.cs - GUID: 07994bfe8b0e4adb97d706de5dea48d5...
+ done. [Time: 11.788000 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/StatusView.cs - GUID: 08e9894bdf0834710b22d3c0aa245ac0...
+ done. [Time: 7.675991 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Interfaces/IOperationFactory.cs - GUID: 0a1161a2ab6569948a0aa7899197218c...
+ done. [Time: 7.615900 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Mock/MockSearchOperation.cs - GUID: 0a2c7bcbdfe0a438999cb0653789cdf4...
+ done. [Time: 7.899528 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageState.cs - GUID: 0a822dba3d5c4c85b150866e5442a5ec...
+ done. [Time: 6.831716 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageGroupOrigins.cs - GUID: 0e372f1bbea04aa9bd68055d4105bd84...
+ done. [Time: 7.260163 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_ProjectTextSettings.cs - GUID: 0e751e877ed14d71a6b8e63ac54949cf...
+ done. [Time: 7.447045 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/Common/UIUtils.cs - GUID: 0edd86f97b0648f685604a5582cff608...
+ done. [Time: 7.485503 ms] 
+Updating Packages/com.unity.analytics/Tests/Runtime/DataPrivacy/JsonSerialization.cs - GUID: 0fe4c527c3aa3eb42912a1caafbbc6a0...
+ done. [Time: 11.190998 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_SpriteAssetMenu.cs - GUID: 1048a87135154606808bf2030da32d18...
+ done. [Time: 9.893038 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/MaterialReferenceManager.cs - GUID: 11a6a034ab84493cbed6af5ae7aae78b...
+ done. [Time: 12.575489 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/SocialShareAcceptTests.cs - GUID: 138961c4434d141a987d96df1f8d7342...
+ done. [Time: 7.890815 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageManagerExtensions.cs - GUID: 20a8ca0a6d82545f6bfd6f2d898d61f7...
+ done. [Time: 7.357209 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_XmlTagStack.cs - GUID: 20a9b557a46149dfbfa04a3a7080f5aa...
+ done. [Time: 9.122074 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_UiEditorPanel.cs - GUID: 21c0044a7f964773be90d197a78e4703...
+ done. [Time: 8.411201 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_EditorUtility.cs - GUID: 2300e75732d74890b38a8ff257a3ae15...
+ done. [Time: 11.673527 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_StyleAssetMenu.cs - GUID: 23a562f2cac6401f9f91251c68a1a794...
+ done. [Time: 7.721359 ms] 
+Updating Packages/com.unity.collab-proxy/Tests/Editor/HistoryTests.cs - GUID: 23a56a19774ed42b6b65646af08a003c...
+ done. [Time: 11.954752 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/PushNotificationClickTests.cs - GUID: 240551e3142f04b0ca801ce8eb645ba2...
+ done. [Time: 7.743593 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/TutorialStartTests.cs - GUID: 2622838afa3284cc882c48ceea4c8220...
+ done. [Time: 7.811195 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Settings.cs - GUID: 2705215ac5b84b70bacc50632be6e391...
+ done. [Time: 10.690142 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/EditorCoroutine.cs - GUID: 27a0335dab59ec542aadd6636a5b4ebd...
+ done. [Time: 9.047261 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_ListPool.cs - GUID: 28375447bcea455c9b51a6650b10c9d7...
+ done. [Time: 6.703122 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/PostAdActionTests.cs - GUID: 293182c4d29604c05b6724ae00fd121a...
+ done. [Time: 7.531473 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageTag.cs - GUID: 2a3f4f8c4e2df41108f55825c24ff694...
+ done. [Time: 6.248836 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/GameStartTests.cs - GUID: 2b2be9ee9f41a4b2db6b502697ba31b1...
+ done. [Time: 6.313433 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageList.cs - GUID: 2d77b2d58287d46a6a61f12c861bfc2f...
+ done. [Time: 11.184989 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_InputField.cs - GUID: 2da0c512f12947e489f739169773d7ca...
+ done. [Time: 47.159511 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Interfaces/IBaseOperation.cs - GUID: 2f1849b9179b464381598f68663790d3...
+ done. [Time: 7.531172 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Packages/PackageInfoTests.cs - GUID: 2f1d33abb004b44cb90ec83a2bfe872e...
+ done. [Time: 8.085509 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_UGUI_Private.cs - GUID: 3069a00b8c364df395994d7d379e0a99...
+ done. [Time: 79.923985 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_UIStyleManager.cs - GUID: 30a939dce2fd4073955f2f20e659d506...
+ done. [Time: 9.334796 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Style.cs - GUID: 30bed781e402439ab8ce4e3357708115...
+ done. [Time: 7.455157 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_DefaultControls.cs - GUID: 322392995be44d23a3c86cfd972f838f...
+ done. [Time: 11.363459 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TextContainer.cs - GUID: 32d40088a6124c578ad6b428df586e2e...
+ done. [Time: 10.682931 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_ScrollbarEventHandler.cs - GUID: 34e150112c1c42ac83170b52d898e322...
+ done. [Time: 7.404681 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_StyleSheetEditor.cs - GUID: 34e2c9b9d9e44953933afe37461f44e6...
+ done. [Time: 10.012619 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_EditorPanel.cs - GUID: 34f6695d37a94370a3697f6b068f5d5e...
+ done. [Time: 8.541598 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMPro_FontAssetCreatorWindow.cs - GUID: 383966e89d344865a36addd5d378ffd3...
+ done. [Time: 23.635490 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/Common/VersionItem.cs - GUID: 3877b2be7ee07495d8918dc8937e6de2...
+ done. [Time: 7.270679 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/TutorialSkipTests.cs - GUID: 3ab6e6972ecb54e2cbd505692415a7ba...
+ done. [Time: 6.399063 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Asset.cs - GUID: 3bda1886f58f4e0ab1139400b160c3ee...
+ done. [Time: 6.441126 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/CollabHistoryRevisionLine.cs - GUID: 3c737f7a9d78541d1ab25f28f045dd32...
+ done. [Time: 8.057266 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Interfaces/IAddOperation.cs - GUID: 3dcbbc060dea46168ffc09a580836240...
+ done. [Time: 7.296818 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageDetails.cs - GUID: 3f3e22b18940a4e828a5170574a3617e...
+ done. [Time: 13.795331 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageAddFromUrlField.cs - GUID: 40f980217d9196e4baa9ebd2ac1328af...
+ done. [Time: 9.309858 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_BaseShaderGUI.cs - GUID: 438efd46088d408d8a53f707fa68d976...
+ done. [Time: 11.441877 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Packages/PackageSearchTests.cs - GUID: 448aaa781aea44811a5d66e3edac37e4...
+ done. [Time: 9.105549 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMPro_ContextMenus.cs - GUID: 44e1d646473a40178712cb2150f54cec...
+ done. [Time: 11.336718 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Common/ThreadedDelay.cs - GUID: 490fe93dbc954e3ba3651b7f55eaba70...
+ done. [Time: 6.863564 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_TextInfo.cs - GUID: 4ae64f3f72004807a9f919f9c27af0db...
+ done. [Time: 10.069705 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Upm/UpmBaseOperation.cs - GUID: 4e830e2dbc3315b4b97cd5311a54e4fe...
+ done. [Time: 12.445092 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_TextUtilities.cs - GUID: 4f0ca6874aa74540bb3d4fe5a0f86bcc...
+ done. [Time: 34.820479 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Mock/MockOperation.cs - GUID: 4fc12201ddc4b4d45b9bdecdf7f00ea5...
+ done. [Time: 6.807379 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/External/SemVersion.cs - GUID: 5075cb5aa3254b099b11b2840d7cd46e...
+ done. [Time: 12.598924 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/PagedListView.cs - GUID: 50de529b6a28f4a7093045e08810a5df...
+ done. [Time: 8.662380 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Text.cs - GUID: 5143f58107604835ab1a5efa2d8818fd...
+ done. [Time: 113.676952 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_ColorGradient.cs - GUID: 54d21f6ece3b46479f0c328f8c6007e0...
+ done. [Time: 7.466274 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Interfaces/IRemoveOperation.cs - GUID: 54e5fc61925bc4ca3b2c1e82dfb35eb5...
+ done. [Time: 6.566115 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageManagerPrefs.cs - GUID: 566f8bae715954c65a2a7a4b5818fc7a...
+ done. [Time: 7.163417 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/AdStartTests.cs - GUID: 589b3ddef1e4d44cea68e0144bd95434...
+ done. [Time: 8.205090 ms] 
+Updating Packages/com.unity.textmeshpro/Tests/Editor/TMP_EditorTests.cs - GUID: 592f7288ed0df2c4b884e2cd9baac023...
+ done. [Time: 14.060932 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/AssemblyInfo.cs - GUID: 5941c79cb78c34a0d9c677ece9784f15...
+ done. [Time: 6.746387 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/ItemAcquiredTests.cs - GUID: 5e7a49a6952af4d4ab2c3b038be68141...
+ done. [Time: 8.498933 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageFiltering.cs - GUID: 5ffd2adf615994485991e37bacbf735c...
+ done. [Time: 7.593366 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/LevelQuitTests.cs - GUID: 617202f4e2bed4ef8acccfd6c1ecd6fa...
+ done. [Time: 6.561908 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageCollection.cs - GUID: 61d72cb49da3040d5ade3edfd6eccfc1...
+ done. [Time: 10.204609 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Compatibility.cs - GUID: 62a7573e463b4f68b578fcba3a94110c...
+ done. [Time: 7.501427 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SpriteAnimator.cs - GUID: 6366ee97f6b541449155028b9487355a...
+ done. [Time: 7.328065 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageAssetPostprocessor.cs - GUID: 63e8a6023745e4347bb661e87a9be1d9...
+ done. [Time: 7.847249 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageManagerWindow.cs - GUID: 650ea1d167b834d0f86d94e1e8c3b80f...
+ done. [Time: 11.071418 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_CoroutineTween.cs - GUID: 658c1fb149e7498aa072b0c0f3bf13f0...
+ done. [Time: 9.928492 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/Interfaces/IPackageManagerExtension.cs - GUID: 66083b7f6dc2e433eae33f3244b2ce88...
+ done. [Time: 6.658054 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_PackageUtilities.cs - GUID: 68eedd4e5b33b37429c02c4add0036fe...
+ done. [Time: 18.001082 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_UpdateManager.cs - GUID: 691db8cb70c4426a8ae718465c21345f...
+ done. [Time: 9.565544 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_SubMeshUI_Editor.cs - GUID: 6b01141ed8f74d198965c86f25eb7040...
+ done. [Time: 8.181053 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_MeshRendererEditor.cs - GUID: 6d437b997e074079b4b2f6e395394f4b...
+ done. [Time: 7.575940 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_MaterialManager.cs - GUID: 6d9df2bc198c417db00037803568139c...
+ done. [Time: 14.072650 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_DropdownEditor.cs - GUID: 6dbcf248c987476181a37f01a1814975...
+ done. [Time: 7.654058 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/CollabToolbarWindow.cs - GUID: 6f516f1ec21a54a59a92bf99db2d9535...
+ done. [Time: 8.516961 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_PostBuildProcessHandler.cs - GUID: 6fdea2af3daa40fe8f88e5e9cfc17abb...
+ done. [Time: 10.875822 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMPro_CreateObjectMenu.cs - GUID: 7065397ff8184621aa3ca4f854491259...
+ done. [Time: 10.929604 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_FontAsset.cs - GUID: 71c1514a6bd24e1e882cebbe1904ce04...
+ done. [Time: 12.366974 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_ResourcesLoader.cs - GUID: 7241c7dc25374fc1a6ab3ef9da79c363...
+ done. [Time: 7.151699 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/MockOperationFactory.cs - GUID: 75938f72739584ed9925bf4ae8989079...
+ done. [Time: 7.156206 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Common/UITests.cs - GUID: 76078ddafb924ce19edc6034201cb15b...
+ done. [Time: 7.328366 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageGroup.cs - GUID: 760934a36e5f490db3c9fcaf497625a4...
+ done. [Time: 7.109035 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/ScreenVisitTests.cs - GUID: 768d77435df35443bad74aedc993c0cf...
+ done. [Time: 7.251750 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_ExtensionMethods.cs - GUID: 77476292f9fa4905a787e6417853846b...
+ done. [Time: 8.408497 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/FirstInteractionTests.cs - GUID: 78759e25237a7430587982cd92a2a0d8...
+ done. [Time: 7.466575 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/KerningPairDrawer.cs - GUID: 78b9ad527fe44d7cb05bbb77fbf351c0...
+ done. [Time: 8.327074 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Packages/PackageTests.cs - GUID: 78e267bad6d564d49803ba3e9c13ff2e...
+ done. [Time: 11.788300 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_InputValidator.cs - GUID: 79ff392d1bde4ad78a3836a4a480392d...
+ done. [Time: 5.873870 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageListExtensions.cs - GUID: 7a74094b34f74992a5121c0586ccf6ea...
+ done. [Time: 6.386444 ms] 
+Updating Packages/com.unity.analytics/DataPrivacy/AssemblyInfo.cs - GUID: 7aad9e80c95b4991a1f4d017c8caf386...
+ done. [Time: 5.981432 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/ChatMessageSentTests.cs - GUID: 7b186a0d29a784d81809e8a5471d155e...
+ done. [Time: 6.942583 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Dropdown.cs - GUID: 7b743370ac3e4ec2a1668f5455a8ef8a...
+ done. [Time: 13.483160 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Common/OperationSignal.cs - GUID: 7da0c11c52b4044de81c175887699282...
+ done. [Time: 7.052249 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Common/ApplicationUtil.cs - GUID: 7ed48dcc992234c659018e00590315b7...
+ done. [Time: 7.574738 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_BitmapShaderGUI.cs - GUID: 806de5a9211448c8b65c8435ebb48dd4...
+ done. [Time: 9.353424 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/SocialShareTests.cs - GUID: 811f7f1f5920641c0a9233503492c9ba...
+ done. [Time: 8.221915 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/ICollabHistoryItemFactory.cs - GUID: 821f5482c5a3f4389885f4432433f56f...
+ done. [Time: 7.032719 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_SDFShaderGUI.cs - GUID: 8413ca0e506d42a1a4bd9769f204ad16...
+ done. [Time: 11.602920 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SpriteAsset.cs - GUID: 84a92b25f83d49b9bc132d206b370281...
+ done. [Time: 10.139411 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Interfaces/ISearchOperation.cs - GUID: 85dba6b2d7204a7f9a1f976eb0a6b4d2...
+ done. [Time: 6.670973 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/FastAction.cs - GUID: 871f8edd56e84b8fb295b10cc3c78f36...
+ done. [Time: 7.404080 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/LevelStartTests.cs - GUID: 876d47a520ae34f81a97792e1afed14b...
+ done. [Time: 6.959108 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_TextElement.cs - GUID: 87ab1bebe13f41f89d5427e7d2c34d58...
+ done. [Time: 7.772737 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/CollabToolbarButton.cs - GUID: 882f1a4147a284f028899b9c018e63eb...
+ done. [Time: 10.390890 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMPro_SortingLayerHelper.cs - GUID: 88ed537c17c34f339121fe9a7d6d7a0e...
+ done. [Time: 7.778145 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Bootstrap.cs - GUID: 8aa8171e088f94069bbd1978a053f7dd...
+ done. [Time: 7.290509 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/UserSignupTests.cs - GUID: 8b0f0c8689876421c90e7b60f096325a...
+ done. [Time: 7.115945 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/IAPTransactionTests.cs - GUID: 8b4a8234f532f4b34aba0ab70400d90d...
+ done. [Time: 8.197879 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageSearchFilter.cs - GUID: 8d65a43500ec84d9186cb6d9ab681277...
+ done. [Time: 7.450951 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_Private.cs - GUID: 8f8b248abe6b4dcebd6cdd0d754717f4...
+ done. [Time: 74.643812 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/GlyphInfoDrawer.cs - GUID: 900f1a451c764dc3bdcc0de815a15935...
+ done. [Time: 8.733287 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_BaseEditorPanel.cs - GUID: 91950f78729ab144aa36e94690b28fad...
+ done. [Time: 23.771595 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/LevelSkipTests.cs - GUID: 93f7ca1a9c5c945a89e884f9611c70f0...
+ done. [Time: 9.110657 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/AdCompleteTests.cs - GUID: 9405b416c158444b19157040fd664533...
+ done. [Time: 8.009494 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshPro.cs - GUID: 9541d86e2fd84c1d9990edf0852d74ab...
+ done. [Time: 12.409639 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/DropdownOptionListDrawer.cs - GUID: 9545c9eb3bf94265810463794fec8334...
+ done. [Time: 7.238530 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/AdOfferTests.cs - GUID: 96626a3e271e94e76a848c68828fbbac...
+ done. [Time: 7.596070 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Sprite.cs - GUID: 968a09f153574430a6e15ae975145768...
+ done. [Time: 6.916143 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_FontAssetEditor.cs - GUID: 96b44f7d98314b139324a8a87eb66067...
+ done. [Time: 18.224619 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_EventManager.cs - GUID: 96e9072453a441618754c478755b3028...
+ done. [Time: 7.644443 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Packages/PackageBaseTests.cs - GUID: 983d491088dbb4db8b83c926939a08c5...
+ done. [Time: 6.497010 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Upm/UpmListOperation.cs - GUID: 9a2c874c382e2419184b302497279dd9...
+ done. [Time: 6.975333 ms] 
+Updating Packages/com.unity.textmeshpro/Tests/Runtime/TMP_RuntimeTests.cs - GUID: 9de24983a2c6cbe4f925c3e98a79b804...
+ done. [Time: 15.271760 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/Common/PopupField.cs - GUID: 9e69df8ff024a4dc1a9e5c22725e4863...
+ done. [Time: 8.860379 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/OperationFactory.cs - GUID: 9ec5dc72125424af38a9bfaca532acc8...
+ done. [Time: 6.945287 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMPro_FontPlugin.cs - GUID: 9edc9283e7d6409fab242fe8fb6a822c...
+ done. [Time: 7.820209 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Upm/UpmAddOperation.cs - GUID: 9f091dea68a1452cb6c04a6dfa73d5f5...
+ done. [Time: 6.841631 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/External/SemVersionExtension.cs - GUID: 9f17a0688211d476f8d8c9742bb9f992...
+ done. [Time: 7.255656 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/PushNotificationEnableTests.cs - GUID: a10564aae782c458cbf1de024f4870f7...
+ done. [Time: 7.026410 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/GameOverTests.cs - GUID: a30e59ca9f68d46db88323ac18f49e31...
+ done. [Time: 7.217799 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/CollabHistoryDropDown.cs - GUID: a483595b0257945278dc75c5ff7d82ee...
+ done. [Time: 7.560917 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_UpdateRegistery.cs - GUID: a55fb7b4961a425381d1282fc424f966...
+ done. [Time: 8.802993 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/TutorialStepTests.cs - GUID: a571de1bea3cb4c9784493c6f1b0b76c...
+ done. [Time: 7.001172 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/AchievementStepTests.cs - GUID: a592d27ead6884163839d4f8da3977ef...
+ done. [Time: 7.328065 ms] 
+Updating Packages/com.unity.analytics/DataPrivacy/DataPrivacyButton.cs - GUID: a5ebb11c6fc3a2f498bd89593f7744aa...
+ done. [Time: 7.727969 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Common/PackageSets.cs - GUID: a5edd19845e0e426eb775477a7988a4a...
+ done. [Time: 8.991978 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageInfoListExtensions.cs - GUID: a7b89acd74e047778b42209a7a733d39...
+ done. [Time: 6.880990 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Presenters/CollabHistoryPresenter.cs - GUID: a7c91a123806d41a0873fcdcb629b1c4...
+ done. [Time: 9.479915 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageOrigin.cs - GUID: a98bc92072da64d49a393088e55ce2a0...
+ done. [Time: 7.349097 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_InputFieldEditor.cs - GUID: aa160f27c3fe4052a5850e21108811b6...
+ done. [Time: 10.149025 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMPro_EditorShaderUtilities.cs - GUID: aa76955fe5bb44f7915d91db8c7043c4...
+ done. [Time: 6.662260 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_StyleSheet.cs - GUID: ab2114bdc8544297b417dfefe9f1e410...
+ done. [Time: 7.480095 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/TutorialCompleteTests.cs - GUID: b025f6f8a47be46418bcb0ed1050cfb4...
+ done. [Time: 7.490611 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_SpriteAssetEditor.cs - GUID: b09be1f217d34247af54863a2f5587e1...
+ done. [Time: 16.415588 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/LevelUpTests.cs - GUID: b0bb2afc5cd494e6f9b44455a0fc22f8...
+ done. [Time: 6.276477 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/Common/Alert.cs - GUID: b274f3d1ea05d4bd8a13f4556f7797d2...
+ done. [Time: 8.161524 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/AnalyticsEventTests.cs - GUID: b5366b8adc0f44b3c9cb261a3f752d7a...
+ done. [Time: 7.980350 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageManagerToolbar.cs - GUID: b6d1682724bab428496b2bd2d8c7b194...
+ done. [Time: 9.362437 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_LineInfo.cs - GUID: b6e75d7f429a4e7e9e1ffb4f85cff49f...
+ done. [Time: 7.227413 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageError.cs - GUID: b7c10e584b708734ba6141e7d4797931...
+ done. [Time: 7.715050 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Interfaces/IListOperation.cs - GUID: b7e8a8fb69eacee439474914ea54bf9b...
+ done. [Time: 6.220894 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageJsonHelper.cs - GUID: b9374526debed24449d75f8cc6d0103f...
+ done. [Time: 6.460956 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/PackageInfo.cs - GUID: b9f324f08cd904ec986357c98dd9eaa6...
+ done. [Time: 8.833038 ms] 
+Updating Packages/com.unity.analytics/DataPrivacy/DataPrivacy.cs - GUID: bff25ea4cf0d3d841b6787b9f649f21b...
+ done. [Time: 8.211399 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/AdSkipTests.cs - GUID: c09652e660b34484cb10d35ed2206df5...
+ done. [Time: 7.290208 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/CollabHistoryItem.cs - GUID: c4c1445ee948a4124bfa9fb818a17e36...
+ done. [Time: 10.140612 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TextAlignmentDrawer.cs - GUID: c55a64c7570474f47a94abe39ebfef04...
+ done. [Time: 7.977646 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageItem.cs - GUID: c68ba5b432ef64e67ae0bf74960908a8...
+ done. [Time: 8.289818 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/StoreItemClickTests.cs - GUID: c786248494be6489bbfa006bdf59c773...
+ done. [Time: 7.555809 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/AssemblyInfo.cs - GUID: ca53a6f1e29564d528bb56b92e0f181c...
+ done. [Time: 6.278881 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SelectionCaret.cs - GUID: ca819640f53b48919bf7774744f7f15e...
+ done. [Time: 6.241324 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/PackageResourceImporterWindow.cs - GUID: cf1fe50a641faac4691bf49eb32ce333...
+ done. [Time: 10.919989 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/HistoryProgressSpinner.cs - GUID: cf6aca931950a4a6a886e214e9e649c4...
+ done. [Time: 7.639936 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/UI/PackageDetailsTests.cs - GUID: d028fbbad11524d13a069f495ddcf01c...
+ done. [Time: 7.828321 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/AchievementUnlockedTests.cs - GUID: d1114812d620342e1a4ad3eaae7e220c...
+ done. [Time: 6.328156 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/AssemblyInfo.cs - GUID: d4ef26aa386b44923b61c9c4b505a67c...
+ done. [Time: 6.147583 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Upm/UpmRemoveOperation.cs - GUID: d5a61f8cc87394b28aec6b88b4083217...
+ done. [Time: 8.662981 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Common/Resources.cs - GUID: d6a708dbb74414a6dbd60e07d9513c1c...
+ done. [Time: 7.107232 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/CollabHistoryDropDownItem.cs - GUID: d912d4873af534bd4a9d44bf1b52f14e...
+ done. [Time: 7.446144 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_ColorGradientAssetMenu.cs - GUID: d9647b571c5e44729b71d756b3d55317...
+ done. [Time: 7.497822 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_SubMesh_Editor.cs - GUID: dd2fe74169b54bf58fca17288513ef38...
+ done. [Time: 8.256167 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_MeshInfo.cs - GUID: e21bec35f48a44298911b25ead550ce3...
+ done. [Time: 12.635880 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Mock/MockAddOperation.cs - GUID: e426a33061f184a9785cd5d82f9fb486...
+ done. [Time: 6.414386 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SpriteAssetImportFormats.cs - GUID: e4e0b1de1aee400d81ed4273141e7823...
+ done. [Time: 6.516840 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_ObjectPool.cs - GUID: e69259f6ff914146ad610be5491eb44a...
+ done. [Time: 7.997777 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Upm/UpmOperationFactory.cs - GUID: e6925bb38494e6a43ba0921e65e424fe...
+ done. [Time: 8.315056 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/SpriteInfoDrawer.cs - GUID: e87e16ece4884c3bb85cc0e02f133a9f...
+ done. [Time: 10.296848 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/CutsceneStartTests.cs - GUID: edf97aac6cc5a437ebf600a06a2e5ac7...
+ done. [Time: 7.109636 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Upm/UpmSearchOperation.cs - GUID: ef5a2781610c4f12a79939f717f789cf...
+ done. [Time: 6.856954 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_MeshUtilities.cs - GUID: effb76e1937b45ff8adf45e51a4c08cf...
+ done. [Time: 9.877715 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/CutsceneSkipTests.cs - GUID: f03b3e03b69e74ef9bd0f20377217a73...
+ done. [Time: 6.997867 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_SpriteAssetImporter.cs - GUID: f1ea944dcf8849ebab391e461b99ccb7...
+ done. [Time: 13.374996 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageStatusBar.cs - GUID: f34f5fa2437664b2a81b4a7f34df87ad...
+ done. [Time: 8.866989 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshProUGUI.cs - GUID: f4688fdb7df04437aeb418b961361dc5...
+ done. [Time: 12.698074 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMPro_TexturePostProcessor.cs - GUID: f4935fb862d54980b1bcbca942962642...
+ done. [Time: 6.600667 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/Services/Packages/Package.cs - GUID: f499e12eaeb145bf9022f581c0b7fa5b...
+ done. [Time: 9.875612 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/StoreOpenedTests.cs - GUID: f4c7193663918411c8f78e3cf844cb9e...
+ done. [Time: 7.638434 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_FontUtilities.cs - GUID: f695b5f9415c40b39ae877eaff41c96e...
+ done. [Time: 9.907460 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Sources/UI/PackageSearchToolbar.cs - GUID: f74142ec8a4cd4fb1b0ff6cf5c3075af...
+ done. [Time: 8.891025 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/CollabAnalytics.cs - GUID: f944311c8fff2479fa3ba741f6039fc8...
+ done. [Time: 7.039930 ms] 
+Updating Packages/com.unity.analytics/Tests/Editor/Unity.Analytics.StandardEvents/LevelCompleteTests.cs - GUID: fa4ff09b6aaaa4df29a884efa38bce56...
+ done. [Time: 6.815491 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/Views/CollabHistoryItemFactory.cs - GUID: fc46f91ea1e8e4ca2ab693fef9156dbe...
+ done. [Time: 7.568729 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Editor/TMP_ColorGradientEditor.cs - GUID: fcc60c1d6bb544d9b712b652f418ff3a...
+ done. [Time: 8.546105 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Mock/MockRemoveOperation.cs - GUID: fd382b8abbd6145c29e32af0e2a26d88...
+ done. [Time: 6.782141 ms] 
+Updating Packages/com.unity.package-manager-ui/Tests/Editor/Services/Mock/MockListOperation.cs - GUID: fea24dc53b50441a9b2a8f9473fede33...
+ done. [Time: 6.772226 ms] 
+Updating Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_ShaderUtilities.cs - GUID: fea49a0730244a98bf1087f7ca9410a8...
+ done. [Time: 12.360665 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Collab/CollabHistoryWindow.cs - GUID: fed9dda667cab45d398d06402bba03f4...
+ done. [Time: 10.148725 ms] 
 - Starting compile Library/ScriptAssemblies/Unity.TextMeshPro.dll
 - Starting compile Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll
 - Starting compile Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
@@ -180,97 +1045,399 @@ Platform modules already initialized, skipping
 - Finished compile Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll
 Symbols will be read from Temp\Unity.Analytics.DataPrivacy.pdb
 Script Module: Unity.Analytics.DataPrivacy.dll
-Pass: 0 took 55 milliseconds
+Pass: 0 took 22 milliseconds
 Pass: 1 took 3 milliseconds
+- Finished compile Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
 - Finished compile Library/ScriptAssemblies/Unity.TextMeshPro.dll
 Symbols will be read from Temp\Unity.TextMeshPro.pdb
 Script Module: Unity.TextMeshPro.dll
-Pass: 0 took 79 milliseconds
-Pass: 1 took 11 milliseconds
+Pass: 0 took 45 milliseconds
+Pass: 1 took 10 milliseconds
 - Finished compile Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
-- Finished compile Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
 - Starting compile Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
 - Finished compile Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
 Begin MonoManager ReloadAssembly
 Initializing Unity.PackageManager (PackageManager) v2018.3.14 for Unity v2018.3.14f1
 Registering platform support modules:
-Registered platform support modules in: 0.0413921s.
+Registered platform support modules in: 0.041112s.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.16 ms.
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.181 seconds
+- Completed reload, in  1.186 seconds
 Platform modules already initialized, skipping
-- Starting compile Library/ScriptAssemblies/Assembly-CSharp.dll
-- Finished compile Library/ScriptAssemblies/Assembly-CSharp.dll
-Symbols will be read from Temp\Assembly-CSharp.pdb
-Script Module: Assembly-CSharp.dll
-Pass: 0 took 27 milliseconds
-Pass: 1 took 9 milliseconds
-- Starting compile Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-- Finished compile Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs(11,27): warning CS0618: 'Application.loadedLevel' is obsolete: 'Use SceneManager to determine what scenes have been loaded'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs Line: 11)
+Script Compilation Pipeline Post Process Assets time: 5.925713s
+Assembly Updater Post Process Assets time: 0.024957s
 
-Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs(11,4): warning CS0618: 'Application.LoadLevel(int)' is obsolete: 'Use SceneManager.LoadScene'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs Line: 11)
+Hashing assets (118 files)... 0.022 seconds
+  file read: 0.006 seconds (3.978 MB)
+  wait for write: 0.000 seconds (I/O thread blocked by consumer, aka CPU bound)
+  wait for read: 0.013 seconds (CPUT thread waiting for I/O thread, aka disk bound)
+  hash: 0.006 seconds
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images/Light/loading.png - GUID: 01e02995805eb483690380a911a657e2...
+ done. [Time: 124.320824 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignMiddle_Light.psd - GUID: 066619c9c9c84f89acb1b48c11a7efe2...
+ done. [Time: 12.436379 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCapLine.psd - GUID: 0d9a36012a224080966c7b55896aa0f9...
+ done. [Time: 10.585284 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/Editor/landscape.jpg - GUID: 10bf81265ad87424d946598c575f45a0...
+ done. [Time: 232.225761 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignLeft_Light.psd - GUID: 12736c98af174f91827a26b66d2b01b9...
+ done. [Time: 9.324580 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBaseLine_Light.psd - GUID: 18775b51e3bd42299fd30bd036ea982f...
+ done. [Time: 10.019529 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/Editor/portrait.jpg - GUID: 1b32bcce201b4494ea8848326290c5d5...
+ done. [Time: 208.333083 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd - GUID: 2fd6421f253b4ef1a19526541f9ffc0c...
+ done. [Time: 12.196617 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignRight.psd - GUID: 342a0f8aca7f4f0691338912faec0494...
+ done. [Time: 8.805697 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenterGeo_Light.psd - GUID: 35ff0937876540d3bd4b6a941df62a92...
+ done. [Time: 10.560947 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images/Dark/loading.png - GUID: 3cf132d4fa07f4f0cb2883499c5c7dd0...
+ done. [Time: 18.202386 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Input Field Icon.psd - GUID: 3ee40aa79cd242a5b53b0b0ca4f13f0f...
+ done. [Time: 10.947931 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignMiddle.psd - GUID: 41b96614b2e6494ba995ddcd252d11ae...
+ done. [Time: 8.809002 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignTop.psd - GUID: 48d034c499ee4697af9dd6e327110249...
+ done. [Time: 8.853769 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCapLine_Light.psd - GUID: 49679f302ac6408697f6b9314a38985c...
+ done. [Time: 9.962143 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images/Light/error.png - GUID: 4c433abcdb28444ebb7bd395ba5c76fc...
+ done. [Time: 13.141243 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images/Dark/download.png - GUID: 4dfd3f5da88944ec6ac5977d676c30c6...
+ done. [Time: 10.498753 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBottom_Light.psd - GUID: 585b70cb75dd43efbfead809c30a1731...
+ done. [Time: 10.609320 ms] 
+Updating Packages/com.unity.analytics/DataPrivacy/DataPrivacyIcon.png - GUID: 599a5fd92bab81a4ab02e52d0b1b1c60...
+ done. [Time: 21.623952 ms] 
+Updating Packages/com.unity.analytics/Editor/AnalyticsEventTracker icon.png - GUID: 5e7c9ab97e5884e4eaa5967e9024f39d...
+ done. [Time: 8.523270 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignFlush_Light.psd - GUID: 64b9fad609434c489c32b1cdf2004a1c...
+ done. [Time: 8.752817 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignFlush.psd - GUID: 691475c57a824010be0c6f474caeb7e1...
+ done. [Time: 9.776763 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenter_Light.psd - GUID: 6ace62d30f494c948b71d5594afce11d...
+ done. [Time: 9.233242 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenter.psd - GUID: 81ed8c76d2bc4a4c95d092c98af4e58f...
+ done. [Time: 9.444762 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBaseLine.psd - GUID: 8bc445bb79654bf496c92d0407840a92...
+ done. [Time: 8.870595 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignJustified.psd - GUID: 92027f7f8cfc4feaa477da0dc38d3d46...
+ done. [Time: 9.180362 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignLeft.psd - GUID: 9288066c33474b94b6ee5465f4df1cc0...
+ done. [Time: 9.387675 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TextMeshPro Inline Graphics icon.psd - GUID: a54eac0e085a44468963fa57f209470d...
+ done. [Time: 11.826458 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Dropdown Icon.psd - GUID: a7ec9e7ad8b847b7ae4510af83c5d868...
+ done. [Time: 11.252591 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images/Dark/error.png - GUID: acc34040a66fe4170bc8885268860cfe...
+ done. [Time: 14.304299 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignMidline_Light.psd - GUID: bb42b2d967d6427983c901a4ffc8ecd9...
+ done. [Time: 10.391191 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignMidLine.psd - GUID: c2f7f6a88b4c4f20a53deb72f3d9144c...
+ done. [Time: 10.184779 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenterGeo.psd - GUID: c76700ea0062413d9f69409b4e9e151b...
+ done. [Time: 10.437461 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBottom.psd - GUID: ca51b19024094d1b87f3e07edb0a75fb...
+ done. [Time: 9.825436 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignRight_Light.psd - GUID: e05ace3bd15740cda0bad60d89092a5b...
+ done. [Time: 10.449479 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignTop_Light.psd - GUID: ed041e68439749a69d0efa0e3d896c2e...
+ done. [Time: 8.917766 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd - GUID: ee148e281f3c41c5b4ff5f8a5afe5a6c...
+ done. [Time: 11.939128 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Images/Light/download.png - GUID: f8eca3a711f4842eba0c52ea9885ef7f...
+ done. [Time: 14.134543 ms] 
+Updating Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignJustified_Light.psd - GUID: fa6bd40a216346b783a4cce741d277a5...
+ done. [Time: 10.824445 ms] 
+Updating ProjectSettings/InputManager.asset - GUID: 00000000000000002000000000000000...
+ done. [Time: 5.747078 ms] 
+Updating ProjectSettings/TagManager.asset - GUID: 00000000000000003000000000000000...
+ done. [Time: 5.934561 ms] 
+Updating ProjectSettings/ProjectSettings.asset - GUID: 00000000000000004000000000000000...
+ done. [Time: 14.340654 ms] 
+Updating ProjectSettings/NavMeshAreas.asset - GUID: 00000000000000004100000000000000...
+ done. [Time: 6.780038 ms] 
+Updating ProjectSettings/Physics2DSettings.asset - GUID: 00000000000000005100000000000000...
+ done. [Time: 5.790043 ms] 
+Updating ProjectSettings/AudioManager.asset - GUID: 00000000000000006000000000000000...
+ done. [Time: 95.258240 ms] 
+Updating ProjectSettings/GraphicsSettings.asset - GUID: 00000000000000006100000000000000...
+ done. [Time: 6.013280 ms] 
+Updating ProjectSettings/TimeManager.asset - GUID: 00000000000000007000000000000000...
+ done. [Time: 5.889193 ms] 
+Updating ProjectSettings/ClusterInputManager.asset - GUID: 00000000000000007100000000000000...
+ done. [Time: 6.045729 ms] 
+Updating ProjectSettings/DynamicsManager.asset - GUID: 00000000000000008000000000000000...
+ done. [Time: 6.329057 ms] 
+Updating ProjectSettings/QualitySettings.asset - GUID: 00000000000000009000000000000000...
+ done. [Time: 6.425503 ms] 
+Updating ProjectSettings/UnityConnectSettings.asset - GUID: 0000000000000000a100000000000000...
+ done. [Time: 5.657242 ms] 
+Updating ProjectSettings/EditorBuildSettings.asset - GUID: 0000000000000000b000000000000000...
+ done. [Time: 6.230809 ms] 
+Updating ProjectSettings/PresetManager.asset - GUID: 0000000000000000b100000000000000...
+ done. [Time: 7.082895 ms] 
+Updating ProjectSettings/EditorSettings.asset - GUID: 0000000000000000c000000000000000...
+ done. [Time: 5.917736 ms] 
+Updating ProjectSettings/VFXManager.asset - GUID: 0000000000000000c100000000000000...
+ done. [Time: 5.762401 ms] 
+Updating Packages/com.unity.textmeshpro/PackageConversionData.json - GUID: 05f5bfd584002f948982a1498890f9a9...
+ done. [Time: 6.611483 ms] 
+Updating Packages/com.unity.modules.unitywebrequestassetbundle/package.json - GUID: 05f7f519769978b79b31d063a7fc6fa1...
+ done. [Time: 5.636812 ms] 
+Updating Packages/com.unity.textmeshpro/LICENSE.md - GUID: 0d2d0f36e67d4518a07df76235e91f9a...
+ done. [Time: 5.892798 ms] 
+Updating Packages/com.unity.textmeshpro/PackageConversionData_Assets.json - GUID: 0e0afa652c0031c48896a97b424d027b...
+ done. [Time: 5.829402 ms] 
+Updating Packages/com.unity.analytics/License.md - GUID: 15bf9c691b85b41a39c18bee2f87e21b...
+ done. [Time: 5.123637 ms] 
+Updating Packages/com.unity.modules.vr/package.json - GUID: 18a4fadfef534684d5af39ca8dc48fe9...
+ done. [Time: 5.227894 ms] 
+Updating Packages/com.unity.modules.physics/package.json - GUID: 1a4266815e998967becf686f9c71f0a6...
+ done. [Time: 6.754499 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/Linux64/libaudiopluginresonanceaudio.so - GUID: 1b355da31ea043feba0c03e35dd4bc62...
+ done. [Time: 9.677012 ms] 
+Updating Packages/com.unity.textmeshpro/package.json - GUID: 220e9325710f4235a43492dd1ee4980d...
+ done. [Time: 5.149175 ms] 
+Updating Packages/com.unity.textmeshpro/CHANGELOG.md - GUID: 22464cf7ab0243a6bf9c79851183b002...
+ done. [Time: 5.942974 ms] 
+Updating Packages/com.unity.package-manager-ui/README.md - GUID: 23805a7a1623842b0b7b21158066bd90...
+ done. [Time: 5.451732 ms] 
+Updating Packages/com.unity.modules.unityanalytics/package.json - GUID: 26a4f29db434fd79025c91f6126382cc...
+ done. [Time: 5.028693 ms] 
+Updating Packages/com.unity.package-manager-ui/LICENSE.md - GUID: 2b3002c18d29d41b0898ab58bc6ee10d...
+ done. [Time: 4.898897 ms] 
+Updating Packages/com.unity.modules.xr/package.json - GUID: 2c814623cb42764d304be0c5ddd03ceb...
+ done. [Time: 4.838506 ms] 
+Updating Packages/com.unity.ads/CHANGELOG.md - GUID: 35b4e72ca46f44581b85082c4dc21d13...
+ done. [Time: 7.341285 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/Android/gvr.aar - GUID: 38c8faf1788024c02930a0c68a6e0edc...
+ done. [Time: 9.801701 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/android_arm64/libaudiopluginresonanceaudio.so - GUID: 3bb0254b9671413d9d08a855c5090237...
+ done. [Time: 10.473815 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/Win/audiopluginresonanceaudio.dll - GUID: 3e9a2175e0404f7ea30b2b694850bae0...
+ done. [Time: 10.631554 ms] 
+Updating Packages/com.unity.modules.unitywebrequest/package.json - GUID: 3fdd83b151eb8d25c5e2f82fc39dcb04...
+ done. [Time: 5.245621 ms] 
+Updating Packages/com.unity.modules.jsonserialize/package.json - GUID: 40bf3cec17fa0b49fe04443c8332d638...
+ done. [Time: 5.391040 ms] 
+Updating Packages/com.unity.modules.imgui/package.json - GUID: 42fe78c8fe682715a2cb531422e6ccb3...
+ done. [Time: 13.354565 ms] 
+Updating Packages/com.unity.purchasing/package.json - GUID: 44f39a74ca5ee4bf5936b17e901f251c...
+ done. [Time: 6.122645 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/iOS/libaudiopluginresonanceaudio.a - GUID: 46098a81a64a45c5b756320e10a22f13...
+ done. [Time: 10.131298 ms] 
+Updating Packages/com.unity.collab-proxy/DEPENDENCIES.md - GUID: 470530e667ad4475786b28fa3187ce95...
+ done. [Time: 5.969113 ms] 
+Updating Packages/com.unity.modules.unitywebrequestaudio/package.json - GUID: 4b518b37798c97b0f860962cbf615533...
+ done. [Time: 5.872668 ms] 
+Updating Packages/com.unity.ads/License.md - GUID: 4c6fe94acbb24417c988bab18cbd5209...
+ done. [Time: 13.620767 ms] 
+Updating Packages/com.unity.modules.uielements/package.json - GUID: 4f0f9b9f3ed97ad2b9ba8f1a8e4666c2...
+ done. [Time: 5.604963 ms] 
+Updating Packages/com.unity.analytics/package.json - GUID: 510d1d319d2754ea4a47c6dd8c421ea0...
+ done. [Time: 6.170417 ms] 
+Updating Packages/com.unity.package-manager-ui/Third Party Notices.md - GUID: 536c0048c80e8407084e29942e15685b...
+ done. [Time: 7.457260 ms] 
+Updating Packages/com.unity.collab-proxy/package.json - GUID: 57b0c806ba25b48aa8a6ecb3345a4a9b...
+ done. [Time: 5.202956 ms] 
+Updating Packages/com.unity.ads/README.md - GUID: 62772aad98ed04f0d955b7d20de61f7f...
+ done. [Time: 29.674909 ms] 
+Updating Packages/com.unity.package-manager-ui/CHANGELOG.md - GUID: 6277a751c6c9f46359fc7004b3ee12f0...
+ done. [Time: 5.143767 ms] 
+Updating Packages/com.unity.purchasing/License.md - GUID: 65d58d50c3db54f979b1ffae3777d74b...
+ done. [Time: 5.445423 ms] 
+Updating Packages/com.unity.modules.vehicles/package.json - GUID: 6afb166a156df2d20433d981f4bb2832...
+ done. [Time: 6.009675 ms] 
+Updating Packages/com.unity.modules.terrain/package.json - GUID: 6d56244f8c39a851975d3c0bd432c66f...
+ done. [Time: 5.838116 ms] 
+Updating Packages/com.unity.package-manager-ui/package.json - GUID: 6d6f82a762acb4417b895d3babc790f9...
+ done. [Time: 4.765496 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/Win64/audiopluginresonanceaudio.dll - GUID: 6e2d432c5ea14e75aa3a79f90f704442...
+ done. [Time: 10.040862 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/OSXIntel64/audiopluginresonanceaudio.bundle - GUID: 6fe576b47d8b47688ec5d02bccd15cf9...
+ done. [Time: 9.563140 ms] 
+Updating Packages/com.unity.collab-proxy/CHANGELOG.md - GUID: 782c49e6e68074dc7ba12c95537825ce...
+ done. [Time: 5.425292 ms] 
+Updating Packages/com.unity.textmeshpro/Plugins/64 Bit Plugins/TMPro_Plugin.dll - GUID: 7c20856617c24cf99a5212838cacc239...
+ done. [Time: 19.408106 ms] 
+Updating Packages/com.unity.textmeshpro/Plugins/64 Bit Plugins/TMPro_Plugin.bundle - GUID: 7e59c7317e51470a833219e69cdeec75...
+ done. [Time: 23.627978 ms] 
+Updating Packages/com.unity.modules.animation/package.json - GUID: 7ef8348b8ea834d7e1bc214b07f7fb87...
+ done. [Time: 6.141574 ms] 
+Updating Packages/com.unity.modules.screencapture/package.json - GUID: 80beef77cb19e713c7c2d481b65ed485...
+ done. [Time: 5.657843 ms] 
+Updating Packages/com.unity.modules.particlesystem/package.json - GUID: 87d720faa37005c08600090e04d8c739...
+ done. [Time: 5.773218 ms] 
+Updating Packages/com.unity.analytics/README.md - GUID: 884f8f0e4025a420893d3a8d1d3063e1...
+ done. [Time: 5.571012 ms] 
+Updating Packages/com.unity.modules.cloth/package.json - GUID: 906c12bc9cd95d3963c6d58f62522c78...
+ done. [Time: 5.898807 ms] 
+Updating Packages/com.unity.purchasing/README.md - GUID: 90791303b72ec4ae198f99d637dfdf6c...
+ done. [Time: 4.728841 ms] 
+Updating Packages/com.unity.modules.tilemap/package.json - GUID: 92a378669877c05c6071d0fed687bb95...
+ done. [Time: 5.009464 ms] 
+Updating Packages/com.unity.modules.imageconversion/package.json - GUID: 953fab16d15d5885b3600fcd6388b2ad...
+ done. [Time: 5.108013 ms] 
+Updating Packages/com.unity.modules.video/package.json - GUID: 96d14b71b907bb52333b2886e665aba6...
+ done. [Time: 5.831506 ms] 
+Updating Packages/com.unity.collab-proxy/README.md - GUID: ac281230df7b14becb40b3c479f1b429...
+ done. [Time: 33.807650 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/Android/libprotobuf-java-nano.jar - GUID: b2b693dffac3a4433b3114fea0b7fd4e...
+ done. [Time: 9.440255 ms] 
+Updating Packages/com.unity.ads/Editor/Resources/Android/builds/unity-ads.aar - GUID: b32abd1c9d73a4cce8389f084ac12b11...
+ done. [Time: 9.588979 ms] 
+Updating Packages/com.unity.modules.wind/package.json - GUID: b83f06ac0c0696e9563230865ca72b81...
+ done. [Time: 5.214975 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/android_arm/libaudiopluginresonanceaudio.so - GUID: b95ab00277ee47c687d710a3bb623d0a...
+ done. [Time: 8.643151 ms] 
+Updating Packages/com.unity.purchasing/CHANGELOG.md - GUID: bb15697a279504a90b825c44dc355047...
+ done. [Time: 6.304420 ms] 
+Updating Packages/com.unity.analytics/CHANGELOG.md - GUID: bcd27da1c9ae94d2cafe094482a20792...
+ done. [Time: 23.894481 ms] 
+Updating Packages/com.unity.purchasing/Documentation/IAP.md - GUID: be4b06d1ee51e4ac2a01a0e499d4c214...
+ done. [Time: 5.683382 ms] 
+Updating Packages/com.unity.modules.ui/package.json - GUID: bfd567a3d1631a761bca9e99fa53d86d...
+ done. [Time: 4.949374 ms] 
+Updating Packages/com.unity.collab-proxy/LICENSE.md - GUID: c754112a02f354a6696fa4f2b99e95a5...
+ done. [Time: 4.907610 ms] 
+Updating Packages/com.unity.textmeshpro/Documentation/TextMeshPro.md - GUID: ca77d26d10b9455ca5a4b22c93be2a31...
+ done. [Time: 5.631103 ms] 
+Updating Packages/com.unity.modules.unitywebrequesttexture/package.json - GUID: d0e3ad91972c66f5238f5b9b7d5ae58a...
+ done. [Time: 35.336057 ms] 
+Updating Packages/com.unity.modules.terrainphysics/package.json - GUID: d3cbe921f7b3d9a3257e7c61a5761796...
+ done. [Time: 14.535048 ms] 
+Updating Packages/com.unity.textmeshpro/Plugins/vcomp120.dll - GUID: d40e85137bc74864a47f42ceddfec228...
+ done. [Time: 9.153021 ms] 
+Updating Packages/com.unity.modules.umbra/package.json - GUID: d85e5eeaf8f135aeaaebdc8aa3cff6c3...
+ done. [Time: 4.957786 ms] 
+Updating Packages/com.unity.ads/package.json - GUID: dced8f6ea9f964e8e8e61574ea889d21...
+ done. [Time: 5.789442 ms] 
+Updating D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/VR/Android/unitygvr.aar - GUID: e1007cd261c84053beb0c3537782908d...
+ done. [Time: 10.585284 ms] 
+Updating Packages/com.unity.modules.assetbundle/package.json - GUID: e1ef8466c8fd01a549f10baa4d51fa17...
+ done. [Time: 55.031397 ms] 
+Updating Packages/com.unity.modules.audio/package.json - GUID: e9df95f53f1c1d0c9199e235d6c42b50...
+ done. [Time: 23.094973 ms] 
+Updating Packages/com.unity.modules.director/package.json - GUID: ec02776fe29df900b897106d61977735...
+ done. [Time: 5.624193 ms] 
+Updating Packages/com.unity.modules.ai/package.json - GUID: f0f13f2ab3d6d13cfc6e4656824bfca8...
+ done. [Time: 5.233603 ms] 
+Updating Packages/com.unity.modules.physics2d/package.json - GUID: f7a8357347c80dc69c08d0b1a05e2122...
+ done. [Time: 5.591443 ms] 
+Updating Packages/com.unity.modules.unitywebrequestwww/package.json - GUID: fa27413e9edb06a6058d6c894eca0338...
+ done. [Time: 5.511823 ms] 
+Updating Packages/com.unity.analytics/DataPrivacy/DataPrivacyButton.prefab - GUID: 71b11355001648444b41d17fd36c150d...
+ done. [Time: 47.549199 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageItem.uxml - GUID: 10145f279f90346bbb61712ff585828b...
+ done. [Time: 427.911246 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageGroup.uxml - GUID: 25ebe415cc14c4f4ea15c34a796b75bb...
+ done. [Time: 10.133401 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Resources/Styles/CollabHistoryCommon.uss - GUID: 3a2d94c8977984b67984caeff9fa666e...
+ done. [Time: 41.668419 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageManagerToolbar.uxml - GUID: 3aba9fe1ad29b42ffb0eea781318a626...
+ done. [Time: 9.613316 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageList.uxml - GUID: 46c02d8d6499b4309ac1ec5d0b818585...
+ done. [Time: 10.624944 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/Alert.uxml - GUID: 4f768b64e6c37495699fffe3007e4379...
+ done. [Time: 8.784364 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Resources/Styles/CollabHistoryDark.uss - GUID: 70d4d75a2877243758b0750cbc75b6eb...
+ done. [Time: 15.318932 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageDetails.uxml - GUID: 93c1370867fcb45079592da39e0994c5...
+ done. [Time: 9.747619 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageAddFromUrlField.uxml - GUID: 97dff1b5ae41ee84886ae7a80ae21499...
+ done. [Time: 8.883214 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageManagerWindow.uxml - GUID: a8d9e44eff3f447db9448925617ccb44...
+ done. [Time: 9.598594 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Styles/Main_Light.uss - GUID: abdc053b8e3644f299aedc641d609a84...
+ done. [Time: 41.891356 ms] 
+Updating Packages/com.unity.collab-proxy/Editor/Resources/Styles/CollabHistoryLight.uss - GUID: b52bde26a83564960bcb90217f72b910...
+ done. [Time: 11.533816 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageStatusBar.uxml - GUID: bbec1324b05a54939ad2fea2d7e11063...
+ done. [Time: 9.698945 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Styles/Main_Dark.uss - GUID: c7559cdbc33f04af1a5a42d2aa5b40a5...
+ done. [Time: 40.563050 ms] 
+Updating Packages/com.unity.package-manager-ui/Editor/Resources/Templates/PackageSearchToolbar.uxml - GUID: cd44c1bc0fa624a39aa784af44c62180...
+ done. [Time: 8.759126 ms] 
+Script Compilation Pipeline Post Process Assets time: 0.002107s
+Assembly Updater Post Process Assets time: 0.014428s
+Unloading 547 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 44.6 MB.
+System memory in use after: 44.6 MB.
 
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(59,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 59)
+Unloading 555 unused Assets to reduce memory usage. Loaded Objects now: 884.
+Total: 4.157979 ms (FindLiveObjects: 0.555539 ms CreateObjectMapping: 0.027041 ms MarkObjects: 3.405342 ms  DeleteObjects: 0.168855 ms)
 
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(59,35): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 59)
+Refreshing native plugins compatible for Editor in 22.15 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 2.97 ms.
+Script Compilation Pipeline Post Process Assets time: 0.000028s
+Assembly Updater Post Process Assets time: 0.001847s
+Updating ProjectSettings/InputManager.asset - GUID: 00000000000000002000000000000000...
+ done. [Time: 5.945077 ms] 
+Updating ProjectSettings/TagManager.asset - GUID: 00000000000000003000000000000000...
+ done. [Time: 5.423790 ms] 
+Updating ProjectSettings/ProjectSettings.asset - GUID: 00000000000000004000000000000000...
+ done. [Time: 5.930054 ms] 
+Updating ProjectSettings/NavMeshAreas.asset - GUID: 00000000000000004100000000000000...
+ done. [Time: 5.610071 ms] 
+Updating ProjectSettings/Physics2DSettings.asset - GUID: 00000000000000005100000000000000...
+ done. [Time: 5.565604 ms] 
+Updating ProjectSettings/AudioManager.asset - GUID: 00000000000000006000000000000000...
+ done. [Time: 5.527446 ms] 
+Updating ProjectSettings/GraphicsSettings.asset - GUID: 00000000000000006100000000000000...
+ done. [Time: 5.598954 ms] 
+Updating ProjectSettings/TimeManager.asset - GUID: 00000000000000007000000000000000...
+ done. [Time: 5.312322 ms] 
+Updating ProjectSettings/ClusterInputManager.asset - GUID: 00000000000000007100000000000000...
+ done. [Time: 5.388336 ms] 
+Updating ProjectSettings/DynamicsManager.asset - GUID: 00000000000000008000000000000000...
+ done. [Time: 5.480576 ms] 
+Updating ProjectSettings/QualitySettings.asset - GUID: 00000000000000009000000000000000...
+ done. [Time: 5.220984 ms] 
+Updating ProjectSettings/UnityConnectSettings.asset - GUID: 0000000000000000a100000000000000...
+ done. [Time: 5.273263 ms] 
+Updating ProjectSettings/EditorBuildSettings.asset - GUID: 0000000000000000b000000000000000...
+ done. [Time: 5.293393 ms] 
+Updating ProjectSettings/PresetManager.asset - GUID: 0000000000000000b100000000000000...
+ done. [Time: 5.182826 ms] 
+Updating ProjectSettings/EditorSettings.asset - GUID: 0000000000000000c000000000000000...
+ done. [Time: 5.839618 ms] 
+Updating ProjectSettings/VFXManager.asset - GUID: 0000000000000000c100000000000000...
+ done. [Time: 5.133552 ms] 
+Script Compilation Pipeline Post Process Assets time: 0.000023s
+Assembly Updater Post Process Assets time: 0.001366s
+Unloading 72 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 34.7 MB.
+System memory in use after: 34.7 MB.
 
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(69,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 69)
+Unloading 56 unused Assets to reduce memory usage. Loaded Objects now: 884.
+Total: 2.516600 ms (FindLiveObjects: 0.224138 ms CreateObjectMapping: 0.012018 ms MarkObjects: 2.247694 ms  DeleteObjects: 0.031548 ms)
 
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(69,35): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 69)
+Refreshing native plugins compatible for Editor in 19.46 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
 
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(96,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 96)
+Refresh Completed time: 27.108212s
+	Asset Scan time: 0.022103s
+	Asset Hashing: 0.336878s [56.7 MB, 168.426163 mb/s]
+	Asset Import (Scripting) time: 5.265464s (count: 384)
+	Post Processs Assets (Scripting) time: 17.780217s
+	Asset Rehashing: 0.099163s [23.5 MB, 237.256409 mb/s]
+	Asset Import (Non Scripting) time: 2.647989s (count: 160)
+	Post Process Assets (Non Scripting) time: 0.099048s
+	Dependent Assets to Import Queue time: 0.000192s
 
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(116,8): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 116)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(124,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 124)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(160,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 160)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(172,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 172)
-
-Reloading assemblies after script compilation.
-Begin MonoManager ReloadAssembly
-Initializing Unity.PackageManager (PackageManager) v2018.3.14 for Unity v2018.3.14f1
-Registering platform support modules:
-Registered platform support modules in: 0.0457514s.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.19 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.182 seconds
-Platform modules already initialized, skipping
-Validating Project structure ... 0.010984 seconds.
 Refresh: detecting if any assets need to be imported or removed ...
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
 
-Refresh Completed time: 0.039278s
-	Asset Scan time: 0.036450s
+Refresh Completed time: 0.068768s
+	Asset Scan time: 0.023026s
 	Asset Hashing: 0.000000s [0 B, 0.000000 mb/s]
 	Asset Import (Scripting) time: 0.000000s (count: 0)
 	Post Processs Assets (Scripting) time: 0.000000s
@@ -279,8 +1446,17 @@ Refresh Completed time: 0.039278s
 	Post Process Assets (Non Scripting) time: 0.000000s
 	Dependent Assets to Import Queue time: 0.000000s
 
+Determining assets that need to be reimported for target platform ... 0.158351 seconds.
+
+Hashing assets (39 files)... 0.009 seconds
+  file read: 0.002 seconds (2.047 MB)
+  wait for write: 0.000 seconds (I/O thread blocked by consumer, aka CPU bound)
+  wait for read: 0.005 seconds (CPUT thread waiting for I/O thread, aka disk bound)
+  hash: 0.003 seconds
+Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.18 ms.
 WARNING: Shader Unsupported: 'Hidden/FrameDebuggerRenderTargetDisplay' - Pass '' has no vertex shader
-Warming cache for 1188 main assets: 0.004163 seconds elapsed
+Warming cache for 528 main assets: 0.000632 seconds elapsed
 Initializing Unity extensions:
  'D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Timeline/Runtime/UnityEngine.Timeline.dll'  GUID: 6a10b2909283487f913b00d94cd3faf5
  'D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/portable/nunit.framework.dll'  GUID: 405b9b51bb344a128608d968297df79c
@@ -302,640 +1478,21 @@ Initializing Unity extensions:
  'D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll'  GUID: 4113173d5e95493ab8765d7b08371de4
  'D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll'  GUID: 4b3fa4bde7f1451a8218c03ee6a8ded8
  'D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll'  GUID: 7668179ede524d6396c8b7d84461ea29
-Unloading 320 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.6 MB.
-System memory in use after: 132.2 MB.
+Unloading 487 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 42.6 MB.
+System memory in use after: 42.7 MB.
 
-Unloading 122 unused Assets to reduce memory usage. Loaded Objects now: 1012.
-Total: 3.560739 ms (FindLiveObjects: 0.327500 ms CreateObjectMapping: 0.036356 ms MarkObjects: 2.168112 ms  DeleteObjects: 1.027870 ms)
+Unloading 462 unused Assets to reduce memory usage. Loaded Objects now: 906.
+Total: 2.945347 ms (FindLiveObjects: 0.252982 ms CreateObjectMapping: 0.023135 ms MarkObjects: 2.488357 ms  DeleteObjects: 0.180573 ms)
 
-arg :D:\app\UnityPackage\2018.3.14f1\Editor\Unity.exe
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
+executeMethod class 'BuildTool' could not be found.
+Argument was -executeMethod BuildTool.BuildPCPackage
  
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :-batchMode
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :-nographics
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :-quit
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :-projectPath
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :E:\unity_project\AssetTool\AssetTool
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :-logFile
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :E:\unity_project\AssetTool\AssetTool\BuildScript\unity_pc_log.txt
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :-executeMethod
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :BuildTool.BuildPCPackage
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-arg :BUILD_PATH=E:\unity_project\AssetTool\AssetTool\BuildTest\AssetToolDemo.exe
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:GetCommandLineArgs(Dictionary`2&) (at Assets\Editor\Scripts\BuildTool.cs:66)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:19)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 66)
-
-target pathE:\unity_project\AssetTool\AssetTool\BuildTest\AssetToolDemo.exe
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogError(Object)
-BuildTool:BuildPCPackage() (at Assets\Editor\Scripts\BuildTool.cs:24)
- 
-(Filename: Assets/Editor/Scripts/BuildTool.cs Line: 24)
-
-Script Compilation Pipeline Post Process Assets time: 0.000512s
-Assembly Updater Post Process Assets time: 0.000119s
-Updating ProjectSettings/ProjectSettings.asset - GUID: 00000000000000004000000000000000...
- done. [Time: 80.836069 ms] 
-Script Compilation Pipeline Post Process Assets time: 0.000014s
-Assembly Updater Post Process Assets time: 0.000114s
-Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.24 ms.
-Refresh: detecting if any assets need to be imported or removed ...
-
-Refresh Completed time: 0.045887s
-	Asset Scan time: 0.042912s
-	Asset Hashing: 0.000000s [0 B, 0.000000 mb/s]
-	Asset Import (Scripting) time: 0.000000s (count: 0)
-	Post Processs Assets (Scripting) time: 0.000000s
-	Asset Rehashing: 0.000000s [0 B, 0.000000 mb/s]
-	Asset Import (Non Scripting) time: 0.000000s (count: 0)
-	Post Process Assets (Non Scripting) time: 0.000000s
-	Dependent Assets to Import Queue time: 0.000000s
-
-Script Compilation Pipeline Post Process Assets time: 0.000026s
-Assembly Updater Post Process Assets time: 0.000167s
-Updating ProjectSettings/UnityConnectSettings.asset - GUID: 0000000000000000a100000000000000...
- done. [Time: 8.972905 ms] 
-Script Compilation Pipeline Post Process Assets time: 0.000013s
-Assembly Updater Post Process Assets time: 0.000118s
-Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
-BuildPlayer: start building target 19
-- Starting compile Library/ScriptAssemblies/Unity.TextMeshPro.dll
-- Starting compile Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll
-- Finished compile Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll
-Symbols will be read from Temp\Unity.Analytics.DataPrivacy.pdb
-Script Module: Unity.Analytics.DataPrivacy.dll
-Pass: 0 took 57 milliseconds
-Pass: 1 took 2 milliseconds
-- Finished compile Library/ScriptAssemblies/Unity.TextMeshPro.dll
-Symbols will be read from Temp\Unity.TextMeshPro.pdb
-Script Module: Unity.TextMeshPro.dll
-Pass: 0 took 64 milliseconds
-Pass: 1 took 9 milliseconds
-- Starting compile Library/ScriptAssemblies/Assembly-CSharp.dll
-- Finished compile Library/ScriptAssemblies/Assembly-CSharp.dll
-Symbols will be read from Temp\Assembly-CSharp.pdb
-Script Module: Assembly-CSharp.dll
-Pass: 0 took 28 milliseconds
-Pass: 1 took 3 milliseconds
-Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs(11,27): warning CS0618: 'Application.loadedLevel' is obsolete: 'Use SceneManager to determine what scenes have been loaded'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs Line: 11)
-
-Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs(11,4): warning CS0618: 'Application.LoadLevel(int)' is obsolete: 'Use SceneManager.LoadScene'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs Line: 11)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(59,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 59)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(59,35): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 59)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(69,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 69)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(69,35): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 69)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(96,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 96)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(116,8): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 116)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(124,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 124)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(160,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 160)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(172,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 172)
-
-DisplayProgressbar: Building Player
-Opening scene 'Assets/Scenes/Main.unity'
-Load scene 'Assets/Scenes/Main.unity' time: 0.020431 ms 
-Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 129.0 MB.
-System memory in use after: 128.8 MB.
-
-Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 1046.
-Total: 10.097823 ms (FindLiveObjects: 0.308872 ms CreateObjectMapping: 0.018028 ms MarkObjects: 9.414279 ms  DeleteObjects: 0.355443 ms)
-
-Created GICache directory at C:/Users/zhangxulei.elvin/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.314s, timestamps: [15.876 - 16.190]
-[00:00:00] Enlighten: Precompute started.
-[PathTracer] Issuing atlassing job. Atlas hash: c76fea2bdba0708c9660795577e6727f, width: 512, height: 512
-[00:00:00] Enlighten: Finished 1 Layout Systems job (0.00s execute, 0.00s integrate, 0.01s wallclock)
-[PathTracer] Integrated atlassing. Atlas hash: c76fea2bdba0708c9660795577e6727f -> Atlas count: 0 -> Instance count: 0 -> Estimated texel count: 0.000M.
-[00:00:00] Enlighten: Finished 1 Tetrahedralize Probes job (0.01s execute, 0.00s integrate, 0.01s wallclock)
-[00:00:00] Enlighten: Precompute took 0.022600 seconds.
-Enlighten scene contents:   0 geometries.   0 instances.   0 systems.   0 probe groups.   0 cube maps. Scene is up-to-date.
-[00:00:00] Enlighten: Bake started.
-Setting up 4 worker threads for Enlighten.
-  Thread -> id: a8fc -> priority: 1 
-  Thread -> id: a900 -> priority: 1 
-  Thread -> id: a908 -> priority: 1 
-  Thread -> id: a904 -> priority: 1 
-[00:00:00] Enlighten: Finished 1 Create Input Lighting job (0.00s execute, 0.00s integrate, 0.01s wallclock)
-[PathTracer][LP] Issuing deduplication and tetrahedralization job. Combined: 80257199cfa681a16be5e09b3c2208f4, tetrahedralized probes: 00000000000000000000000000000000, non-tetrahedralized probes: 00000000000000000000000000000000, dependencies: 00000000000000000000000000000000
-[PathTracer][LP] Integrating deduplicated and tetrahedralized probes for hash 80257199cfa681a16be5e09b3c2208f4.
-[PathTracer] Common reset.
-[PathTracer] Lightmap reset.
-[PathTracer][LP] Light probes reset.
-[PathTracer][CB] Custom bakes reset.
-[PathTracer] building lightmap data asset.
-[PathTracer] m_Clear = false;
-gi::BakeBackendSwitch: Clear() active clients.
-[EnlightenBakeManager] m_Clear = false;
-[PathTracer] building lightmap data asset.
-[PathTracer] m_Clear = false;
-gi::BakeBackendSwitch: switching bake backend from 3 to 1.
-[00:00:00] Enlighten: Finished 1 Create Input Lighting job (0.00s execute, 0.00s integrate, 0.01s wallclock)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-[PathTracer] Updated environment lighting, hash bfa7025638d60f3331b9e48919df5d85.
-[PathTracer] Updated environment lighting, hash c3d74509836096609abde62d65149a1c.
-[PathTracer] building lightmap data asset.
-[00:00:00] Enlighten: Reflection Probes started.
-[00:00:00] Enlighten: Finished 1 Bake Ambient Probe job (0.00s execute, 0.00s integrate, 0.01s wallclock)
-[PathTracer] Common reset.
-[PathTracer] Lightmap reset.
-[PathTracer][LP] Light probes reset.
-[00:00:01] Enlighten: Finished 1 Reflection System job (0.00s execute, 0.00s integrate, 0.01s wallclock)
-[00:00:01] Enlighten: Finished 1 Bake Runtime job (0.19s execute, 0.00s integrate, 0.62s wallclock)
-[00:00:01] Enlighten: Bake took 0.726331 seconds.
-[00:00:01] Enlighten: LightingDataAsset started.
-[PathTracer] Fetching lightmaps for lightmap data asset started.
-[PathTracer] Fetching lightmaps for lightmap data asset finished.
-> Collecting Enlighten data
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+(Filename: D:\unity\Runtime/Utilities/Argv.cpp Line: 354)
 
 
-Mono dependencies included in the build
-Dependency assembly - System.Diagnostics.StackTrace.dll
-Dependency assembly - System.Globalization.Extensions.dll
-Dependency assembly - System.Runtime.Serialization.Xml.dll
-Dependency assembly - System.Xml.XPath.XDocument.dll
-Dependency assembly - netstandard.dll
-Dependency assembly - Mono.Security.dll
-Dependency assembly - System.ComponentModel.Composition.dll
-Dependency assembly - System.Configuration.dll
-Dependency assembly - System.Core.dll
-Dependency assembly - System.Data.dll
-Dependency assembly - System.Drawing.dll
-Dependency assembly - System.EnterpriseServices.dll
-Dependency assembly - System.IO.Compression.FileSystem.dll
-Dependency assembly - System.IO.Compression.dll
-Dependency assembly - System.Net.Http.dll
-Dependency assembly - System.Numerics.dll
-Dependency assembly - System.Runtime.Serialization.dll
-Dependency assembly - System.ServiceModel.Internals.dll
-Dependency assembly - System.Transactions.dll
-Dependency assembly - System.Xml.Linq.dll
-Dependency assembly - System.Xml.dll
-Dependency assembly - System.dll
-Dependency assembly - mscorlib.dll
-Dependency assembly - UnityEngine.UI.dll
-Dependency assembly - UnityEngine.Networking.dll
-Dependency assembly - UnityEngine.Timeline.dll
-Dependency assembly - UnityEngine.SpatialTracking.dll
-Dependency assembly - Assembly-CSharp.dll
-Dependency assembly - Unity.Analytics.DataPrivacy.dll
-Dependency assembly - Unity.TextMeshPro.dll
+Aborting batchmode due to failure:
+executeMethod class 'BuildTool' could not be found.
+Argument was -executeMethod BuildTool.BuildPCPackage
 
-Unloading 104 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 166.6 MB.
-System memory in use after: 163.4 MB.
-
-Unloading 689 unused Assets to reduce memory usage. Loaded Objects now: 1038.
-Total: 14.185567 ms (FindLiveObjects: 0.658305 ms CreateObjectMapping: 0.037257 ms MarkObjects: 9.837926 ms  DeleteObjects: 3.651477 ms)
-
-[EnlightenBakeManager] m_Clear = false;
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 138.1 MB.
-System memory in use after: 138.1 MB.
-
-Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 1049.
-Total: 11.835077 ms (FindLiveObjects: 0.332308 ms CreateObjectMapping: 0.057087 ms MarkObjects: 11.427955 ms  DeleteObjects: 0.016826 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 139.4 MB.
-System memory in use after: 138.3 MB.
-
-Unloading 63 unused Assets to reduce memory usage. Loaded Objects now: 1037.
-Total: 10.849572 ms (FindLiveObjects: 0.277925 ms CreateObjectMapping: 0.016225 ms MarkObjects: 9.493901 ms  DeleteObjects: 1.059719 ms)
-
-
--------------------------------------------------------------------------------
-Build Report
-Uncompressed usage by category (Percentages based on user generated assets only):
-Textures               14.5 mb	 45.7% 
-Meshes                 1.5 mb	 4.8% 
-Animations             1.2 mb	 3.6% 
-Sounds                 0.0 kb	 0.0% 
-Shaders                201.1 kb	 0.6% 
-Other Assets           159.3 kb	 0.5% 
-Levels                 5.2 kb	 0.0% 
-Scripts                947.9 kb	 2.9% 
-Included DLLs          13.2 mb	 41.4% 
-File headers           150.0 kb	 0.5% 
-Total User Assets      31.8 mb	 100.0% 
-Complete build size    68.4 mb
-Used Assets and files from the Resources folder, sorted by uncompressed size:
- 1.6 mb	 2.3% Assets/unity-chan!/Unity-chan! Model/Art/Models/unitychan.fbx
- 1.3 mb	 1.9% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_SPEC.tga
- 689.2 kb	 1.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_ARpose2.fbx
- 682.8 kb	 1.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_NRM.tga
- 682.8 kb	 1.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/body_01_NRM.tga
- 682.8 kb	 1.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01.tga
- 682.8 kb	 1.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/face_00.tga
- 682.8 kb	 1.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/body_01.tga
- 662.6 kb	 0.9% Assets/Resources/atlas/sprite2/DeathMallet.png
- 543.3 kb	 0.8% Assets/Resources/atlas/sprite2/DeathSword.png
- 531.5 kb	 0.8% Assets/Resources/atlas/sprite1/Blood8.png
- 512.0 kb	 0.7% Assets/Resources/atlas/sprite2/Mallet.png
- 505.4 kb	 0.7% Assets/Resources/atlas/sprite1/Blood12.png
- 494.1 kb	 0.7% Assets/Resources/atlas/sprite1/Blood11.png
- 491.9 kb	 0.7% Assets/Resources/atlas/sprite2/Axe.png
- 442.8 kb	 0.6% Assets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_ARpose1.fbx
- 410.9 kb	 0.6% Assets/Resources/atlas/sprite2/Clock.png
- 361.9 kb	 0.5% Assets/Resources/atlas/sprite2/IceAxe.png
- 341.5 kb	 0.5% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/eye_iris_R_00.tga
- 341.5 kb	 0.5% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/eye_iris_L_00.tga
- 341.5 kb	 0.5% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/eyeline_00.tga
- 341.5 kb	 0.5% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/body_01_SPEC.tga
- 341.5 kb	 0.5% Assets/Resources/textures/timg.jpg
- 337.1 kb	 0.5% Assets/Resources/atlas/sprite1/Blood13.png
- 323.9 kb	 0.5% Assets/Resources/atlas/sprite2/Chainsaw.png
- 314.1 kb	 0.4% Assets/Resources/atlas/sprite2/Crowbar.png
- 240.7 kb	 0.3% Assets/Resources/atlas/sprite1/Blood6.png
- 237.2 kb	 0.3% Assets/Resources/atlas/sprite1/Blood9.png
- 226.9 kb	 0.3% Assets/Resources/atlas/sprite2/Hammer.png
- 218.7 kb	 0.3% Assets/Resources/atlas/sprite2/FireExtinguisher.png
- 202.1 kb	 0.3% Assets/Resources/atlas/sprite2/BuildersTorch.png
- 177.5 kb	 0.3% Assets/Resources/atlas/sprite2/Flashlight_2.png
- 170.8 kb	 0.2% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/skin_01.tga
- 165.6 kb	 0.2% Assets/Resources/atlas/sprite2/Flashlight_3.png
- 154.1 kb	 0.2% Assets/Resources/atlas/sprite1/Blood7.png
- 152.3 kb	 0.2% Assets/Resources/atlas/sprite1/Blood2.png
- 145.9 kb	 0.2% Assets/Resources/atlas/sprite2/Flashlight_1.png
- 136.7 kb	 0.2% Assets/Resources/atlas/sprite1/Blood5.png
- 131.1 kb	 0.2% Resources/unity_builtin_extra
- 129.6 kb	 0.2% Assets/Resources/atlas/sprite2/Lantern.png
- 123.6 kb	 0.2% Assets/Resources/atlas/sprite1/Blood1.png
- 109.1 kb	 0.2% Assets/Resources/atlas/sprite2/Hacksaw.png
- 93.2 kb	 0.1% Assets/Resources/atlas/sprite1/Blood3.png
- 85.5 kb	 0.1% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/cheek_00.tga
- 57.1 kb	 0.1% Assets/Resources/atlas/sprite1/Blood10.png
- 54.8 kb	 0.1% Assets/Resources/atlas/sprite1/Blood4.png
- 42.8 kb	 0.1% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/ENV2.tga
- 31.5 kb	 0.0% Assets/Resources/unit/unitychan.prefab
- 18.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/Animators/UnityChanARPose.controller
- 13.0 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_fuku_ds.shader
- 13.0 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_hair_ds.shader
- 11.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_hada.shader
- 8.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_akarami_blend.shader
- 8.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eye_blend.shader
- 8.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eyelash_blend.shader
- 8.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eye.shader
- 4.1 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
- 4.1 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/GUISystem/Standalone/UnityEngine.UI.dll
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/eye_close@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/disstract2@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/disstract1@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/default@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/smile2@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/smile1@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/sap@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/conf@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/angry2@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/angry1@unitychan.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/SURPRISE.anim
- 3.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/ASHAMED.anim
- 2.6 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_U.anim
- 2.6 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_O.anim
- 2.6 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_I.anim
- 2.6 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_E.anim
- 2.6 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_A.anim
- 1.7 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
- 1.7 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Networking/Standalone/UnityEngine.Networking.dll
- 1.5 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll
- 1.5 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/Timeline/Runtime/UnityEngine.Timeline.dll
- 0.9 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll
- 0.9 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/FO_CLOTH1.tga
- 0.9 kb	 0.0% Assets/Resources/materials/mat1.mat
- 0.8 kb	 0.0% Assets/Resources/prefabs/UIPrefab/UItest.prefab
- 0.6 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll
- 0.6 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Runtime/UnityEngine.GoogleAudioSpatializer.dll
- 0.5 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/FO_SKIN1.tga
- 0.5 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/FO_RIM1.tga
- 0.5 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/hair.mat
- 0.5 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/body.mat
- 0.4 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll
- 0.4 kb	 0.0% D:/app/UnityPackage/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Runtime/UnityEngine.SpatialTracking.dll
- 0.4 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/mat_cheek.mat
- 0.3 kb	 0.0% Assets/Resources/prefabs/cube2.prefab
- 0.3 kb	 0.0% Assets/Resources/prefabs/cube1.prefab
- 0.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/skin1.mat
- 0.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/face.mat
- 0.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/eyeline.mat
- 0.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/eyebase.mat
- 0.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/eye_R1.mat
- 0.3 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Art/Materials/eye_L1.mat
- 0.3 kb	 0.0% Packages/com.unity.analytics/Unity.Analytics.Tracker.dll
- 0.3 kb	 0.0% Packages/com.unity.ads/UnityEngine.Advertisements.dll
- 0.1 kb	 0.0% Packages/com.unity.analytics/Unity.Analytics.Editor.dll
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/UnityChanControlScriptWithRgidBody.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/PackageResourceImporterWindow.cs
- 0.1 kb	 0.0% Packages/com.unity.analytics/DataPrivacy/DataPrivacyButton.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_ScrollbarEventHandler.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_ExtensionMethods.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SpriteAssetImportFormats.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/MaterialReferenceManager.cs
- 0.1 kb	 0.0% Packages/com.unity.analytics/Tests/Runtime/DataPrivacy/JsonSerialization.cs
- 0.1 kb	 0.0% Packages/com.unity.analytics/DataPrivacy/DataPrivacy.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_ShaderUtilities.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_EventManager.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_UpdateManager.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_TextUtilities.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SpriteAnimator.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SelectionCaret.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_MaterialManager.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_InputValidator.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_DefaultControls.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Compatibility.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_ColorGradient.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/ThirdPersonCamera.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Tests/Runtime/TMP_RuntimeTests.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshProUGUI.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TextContainer.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_UGUI_Private.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_MeshUtilities.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_FontUtilities.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_UpdateRegistery.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_TextElement.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SubMeshUI.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_StyleSheet.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SpriteAsset.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_InputField.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_FontAsset.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_CoroutineTween.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/SpringManager.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/SpringCollider.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/IKCtrlRightHand.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/CameraController.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshPro.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMPro_Private.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_XmlTagStack.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_TextInfo.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_SubMesh.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Style.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Sprite.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Settings.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_ObjectPool.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Dropdown.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Asset.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/FastAction.cs
- 0.1 kb	 0.0% Packages/com.unity.analytics/DataPrivacy/AssemblyInfo.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/SplashScreen/Scripts/SplashScreen.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/SpringBone.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/RandomWind.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/IdleChanger.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/FaceUpdate.cs
- 0.1 kb	 0.0% Assets/unity-chan!/Unity-chan! Model/Scripts/AutoBlink.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_Text.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_MeshInfo.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_ListPool.cs
- 0.1 kb	 0.0% Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_LineInfo.cs
- 0.1 kb	 0.0% Assets/Scripts/AssetTool.cs
--------------------------------------------------------------------------------
-Unloading 101 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.1 MB.
-System memory in use after: 148.8 MB.
-
-Unloading 639 unused Assets to reduce memory usage. Loaded Objects now: 1054.
-Total: 13.758014 ms (FindLiveObjects: 0.714792 ms CreateObjectMapping: 0.113874 ms MarkObjects: 8.967797 ms  DeleteObjects: 3.960349 ms)
-
-DisplayProgressNotification: Build Successful
-Load scene 'Temp/__Backupscenes/0.backup' time: 0.162548 ms 
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-[00:00:00] Enlighten: LightingDataAsset took 6.170502 seconds. Cancelled, so not done yet.
-System memory in use before: 139.4 MB.
-System memory in use after: 139.4 MB.
-
-Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 1045.
-Total: 11.575480 ms (FindLiveObjects: 0.304966 ms CreateObjectMapping: 0.017427 ms MarkObjects: 11.245276 ms  DeleteObjects: 0.006911 ms)
-
-- Starting compile Library/ScriptAssemblies/Unity.TextMeshPro.dll
-- Starting compile Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll
-- Starting compile Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
-- Starting compile Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
-- Finished compile Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll
-Symbols will be read from Temp\Unity.Analytics.DataPrivacy.pdb
-Script Module: Unity.Analytics.DataPrivacy.dll
-Pass: 0 took 68 milliseconds
-Pass: 1 took 0 milliseconds
-- Finished compile Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
-- Finished compile Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
-- Finished compile Library/ScriptAssemblies/Unity.TextMeshPro.dll
-Symbols will be read from Temp\Unity.TextMeshPro.pdb
-Script Module: Unity.TextMeshPro.dll
-Pass: 0 took 88 milliseconds
-Pass: 1 took 12 milliseconds
-- Starting compile Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
-- Finished compile Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
-- Starting compile Library/ScriptAssemblies/Assembly-CSharp.dll
-- Finished compile Library/ScriptAssemblies/Assembly-CSharp.dll
-Symbols will be read from Temp\Assembly-CSharp.pdb
-Script Module: Assembly-CSharp.dll
-Pass: 0 took 28 milliseconds
-Pass: 1 took 4 milliseconds
-- Starting compile Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-- Finished compile Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs(11,27): warning CS0618: 'Application.loadedLevel' is obsolete: 'Use SceneManager to determine what scenes have been loaded'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs Line: 11)
-
-Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs(11,4): warning CS0618: 'Application.LoadLevel(int)' is obsolete: 'Use SceneManager.LoadScene'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs Line: 11)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(59,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 59)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(59,35): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 59)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(69,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 69)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs(69,35): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs Line: 69)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(96,9): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 96)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(116,8): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 116)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(124,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 124)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(160,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 160)
-
-Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs(172,12): warning CS0618: 'AnimatorStateInfo.nameHash' is obsolete: 'AnimatorStateInfo.nameHash has been deprecated. Use AnimatorStateInfo.fullPathHash instead.'
- 
-(Filename: Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs Line: 172)
-
-Batchmode quit successfully invoked - shutting down!
-[Performance] CurlRequestCheck                        :       32 samples, Peak.  82.9 us (3.5x), Avg.  23.4 us, Total. 748.7 us (0.0%)
-[Performance] PackageManager::RunRequestSynchronously :        5 samples, Peak.  59.8 us (3.0x), Avg.  20.0 us, Total. 100.1 us (0.0%)
-Refresh: detecting if any assets need to be imported or removed ...
-
-Refresh Completed time: 0.047282s
-	Asset Scan time: 0.043533s
-	Asset Hashing: 0.000000s [0 B, 0.000000 mb/s]
-	Asset Import (Scripting) time: 0.000000s (count: 0)
-	Post Processs Assets (Scripting) time: 0.000000s
-	Asset Rehashing: 0.000000s [0 B, 0.000000 mb/s]
-	Asset Import (Non Scripting) time: 0.000000s (count: 0)
-	Post Process Assets (Non Scripting) time: 0.000000s
-	Dependent Assets to Import Queue time: 0.000000s
-
-Refresh: detecting if any assets need to be imported or removed ...
-
-Refresh Completed time: 0.043298s
-	Asset Scan time: 0.040327s
-	Asset Hashing: 0.000000s [0 B, 0.000000 mb/s]
-	Asset Import (Scripting) time: 0.000000s (count: 0)
-	Post Processs Assets (Scripting) time: 0.000000s
-	Asset Rehashing: 0.000000s [0 B, 0.000000 mb/s]
-	Asset Import (Non Scripting) time: 0.000000s (count: 0)
-	Post Process Assets (Non Scripting) time: 0.000000s
-	Dependent Assets to Import Queue time: 0.000000s
-
-[Package Manager] Server::Kill -- Server was shutdown
-Cleanup mono
-Exiting batchmode successfully now!
-Exiting without the bug reporter. Application will terminate with return code 0
+Exiting without the bug reporter. Application will terminate with return code 1
