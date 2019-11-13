@@ -45,7 +45,6 @@ def exportProj(srcProj, destProj, platform):
         print "srcproj not exist"
         sys.exit(-1)
     clearDestProj(destProj, True)
-    return
     linkProj(srcProj, destProj)
     CopyProj(srcProj, destProj)
 

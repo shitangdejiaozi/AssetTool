@@ -35,6 +35,23 @@ def getDir(path):
     dir = dir.replace("\\", "/")
     return dir
 
+def GetDirList(dir):
+    dirs = []
+    files = os.listdir(dir)
+    for file in files :
+        path = dir + "/" + file
+        if os.path.isdir(path):
+            dirs.append(path)
+            dirs += GetDirList(path)
+    return dirs
+
+def findDir(dirRoot, dirName):
+    dirList = GetDirList(dirRoot)
+    for dir in dirList :
+        if len(dir) > len(dirName) and dir[-len(dirName):] == dirName:
+            return dir
+    return ""
+
 #适用于destDir未创建
 def CopyDirImmediate(srcDir, destDir):
     if not os.path.exists(srcDir):

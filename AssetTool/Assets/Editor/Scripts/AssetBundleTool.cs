@@ -21,6 +21,15 @@ public class AssetBundleTool
     public static string PlatformName = string.Empty;
     public static string BundleListName = "Bundle_list.data";
 
+    [MenuItem("AssetBundle/创建buildConfig")]
+    public static void CreateBuildConfig()
+    {
+        var config = ScriptableObject.CreateInstance<BuildConfig>();
+        AssetDatabase.CreateAsset(config, configPath);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
+
     [MenuItem("AssetBundle/选择当前路径到copybuffer")]
     public static void CopySelectPath()
     {
@@ -79,36 +88,7 @@ public class AssetBundleTool
         BuildAssetBundle(false);
     }
 
-    public static void SetBundelModeOpen(bool isBundle)
-    {
-        BuildTarget buildTarget = EditorUserBuildSettings.activeBuildTarget;
-        BuildTargetGroup targetGroup = BuildTargetGroup.Standalone;
-        if(buildTarget == BuildTarget.Android)
-        {
-            targetGroup = BuildTargetGroup.Android;
-        }
-        else if(buildTarget == BuildTarget.iOS)
-        {
-            targetGroup = BuildTargetGroup.iOS;
-        }
-        else if(buildTarget == BuildTarget.StandaloneWindows64)
-        {
-            targetGroup = BuildTargetGroup.Standalone;
-        }
-        string cursymbol = PlayerSettings.GetScriptingDefineSymbolsForGroup(targetGroup);
-        if(isBundle)
-        {
-            cursymbol += ";USE_ASSETBUNDLE";
-        }
-        else
-        {
-
-        }
-        PlayerSettings.SetScriptingDefineSymbolsForGroup(targetGroup, cursymbol);
-        
-
-
-    }
+   
     
     private static bool BuildAssetBundle(bool isRebuild)
     {

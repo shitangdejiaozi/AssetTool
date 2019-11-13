@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 在Assets/Create下
 /// </summary>
-[CreateAssetMenu(menuName = "AssetBunlde/Build config", fileName = "Assets/buildConfig")]
+//[CreateAssetMenu(menuName = "AssetBunlde/Build config", fileName = "Assets/buildConfig")]
 public class BuildConfig : ScriptableObject
 {
     [SerializeField]

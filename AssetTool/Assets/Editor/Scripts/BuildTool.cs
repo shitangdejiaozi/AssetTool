@@ -26,8 +26,10 @@ public class BuildTool
         {
             targetPath = string.Format("{0}/{1}.exe", GetBuildDir(), App_Name);
         }
-        
-        
+
+        SetBundelModeOpen(true);
+
+
         PlayerSettings.companyName = CompanyName;
         PlayerSettings.productName = App_Name;
 
@@ -57,7 +59,36 @@ public class BuildTool
 
 
     }
-    
+
+    public static void SetBundelModeOpen(bool isBundle)
+    {
+        BuildTarget buildTarget = EditorUserBuildSettings.activeBuildTarget;
+        BuildTargetGroup targetGroup = BuildTargetGroup.Standalone;
+        if (buildTarget == BuildTarget.Android)
+        {
+            targetGroup = BuildTargetGroup.Android;
+        }
+        else if (buildTarget == BuildTarget.iOS)
+        {
+            targetGroup = BuildTargetGroup.iOS;
+        }
+        else if (buildTarget == BuildTarget.StandaloneWindows64)
+        {
+            targetGroup = BuildTargetGroup.Standalone;
+        }
+        string cursymbol = PlayerSettings.GetScriptingDefineSymbolsForGroup(targetGroup);
+        if (isBundle)
+        {
+            cursymbol += ";USE_ASSETBUNDLE";
+        }
+        else
+        {
+
+        }
+        PlayerSettings.SetScriptingDefineSymbolsForGroup(targetGroup, cursymbol);
+
+    }
+
     private static void GetCommandLineArgs(out Dictionary<string, string> Args)
     {
         Args = new Dictionary<string, string>();
