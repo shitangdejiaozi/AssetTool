@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
+using System;
 using UnityEditor;
 
 public class ResourceManager : Singleton<ResourceManager>
@@ -30,10 +32,18 @@ public class ResourceManager : Singleton<ResourceManager>
         {
             return null;
         }
+        T resObj;
+        if(IsUseBundle(resPath))
+        {
+            resObj = LoadFromBundle(resPath, typeof(T) ,true) as T;
+        }
+        else
+        {
+            resObj = LoadFromResource(resPath, typeof(T), true) as T;
+        }
 
 
-
-        return null;
+        return resObj;
     }
 
     private bool IsUseBundle(string resPath)
@@ -53,13 +63,30 @@ public class ResourceManager : Singleton<ResourceManager>
         return isUse;
     }
 
-    private void LoadFromResource(string resPath)
+    private Object LoadFromResource(string resPath, Type type, bool isSync)
     {
-
+        Object loadAssets = new Object();
+        if(isSync)
+        {
+            loadAssets = Resources.Load(resPath, type);
+        }
+        else
+        {
+            var request = Resources.LoadAsync(resPath, type);
+        }
+        return loadAssets;
     }
 
-    private void LoadFromBundle(string resPath)
+    private Object LoadFromBundle(string resPath, Type type, bool isSync)
     {
+        Object loadAssets = new Object();
+        string abName = AssetBundleManager.Instance.GetAssetBundleName(resPath);
 
+        if(isSync)
+        {
+
+
+        }
+        return null;
     }
 }

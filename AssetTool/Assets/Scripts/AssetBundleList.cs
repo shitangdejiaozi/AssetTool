@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text;
 using System.IO;
 
 public class AssetBundleList 
@@ -8,6 +9,7 @@ public class AssetBundleList
     public string Platform = string.Empty; 
     public int TotalCount = 0;
     public List<AssetBundleInfo> BundleList = new List<AssetBundleInfo>();
+    private string Assetbundle_Ex = ".ab";
 
     public class AssetBundleInfo
     {
@@ -79,7 +81,7 @@ public class AssetBundleList
             {
                 AssetBundleInfo abInfo = new AssetBundleInfo();
                 abInfo.FileName = string.Intern(br.ReadString());
-                Debug.LogError("file name" + abInfo.FileName);
+             //   Debug.LogError("file name" + abInfo.FileName);
                 abInfo.Md5Name = br.ReadString();
                 int dependsCount = br.ReadInt32();
                 if(dependsCount != 0)
@@ -103,4 +105,38 @@ public class AssetBundleList
         }
     }
 
+    public AssetBundleInfo GetAssetInfo(string bundleName)
+    {
+        for(int i = 0; i< BundleList.Count; i++)
+        {
+            if(BundleList[i].FileName == bundleName)
+            {
+                return BundleList[i];
+
+            }
+        }
+        return null;
+    }
+
+    public string GetBundleName(string assetName)
+    {
+        StringBuilder builder = new StringBuilder();
+        builder.Append(Path.GetDirectoryName(assetName)).Append(Assetbundle_Ex);
+        string abName = builder.ToString().ToLower();
+        abName.Replace("\\", "/");
+
+        string realName = null;
+        var AssetInfo = GetAssetInfo(abName);
+
+        if(AssetInfo != null)
+        {
+            realName = AssetInfo.FileName;
+        }
+        else
+        {
+            Debug.LogError("res is invalid");
+        }
+
+        return realName;
+    }
 }
