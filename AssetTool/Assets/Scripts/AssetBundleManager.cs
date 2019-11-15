@@ -13,7 +13,6 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
     public string BundleRealRootPath;
     public string BundleListName = "Bundle_list.data";
 
-    private Dictionary<string, AssetBundleList.AssetBundleInfo> m_abDict = new Dictionary<string, AssetBundleList.AssetBundleInfo>();
 
     public void Initialize()
     {
@@ -21,6 +20,15 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
         BundleRealRootPath = string.Format("{0}/{1}", RootPath, BundlePath);
        
         LoadBundleList();
+    }
+
+    public void Update()
+    {
+        bool usebunlde = true;
+        if(m_bundleLists != null && usebunlde)
+        {
+            m_bundleLists.CheckAsyncLoad();
+        }
     }
 
     private void LoadBundleList()
@@ -59,21 +67,22 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
         var AssetInfo = m_bundleLists.GetAssetInfo(abName);
         if(AssetInfo != null)
         {
-            depends.AddRange(AssetInfo.DependNames);
+            if(AssetInfo.DependNames != null)
+                depends.AddRange(AssetInfo.DependNames);
         }
         return depends;
     }
 
-    public void LoadAssetBundleByDepends(string abName, bool isSync)
+    public void LoadAssetBundleByDepends(string abName, bool isSync, ref Dictionary<string, AssetBundleList.AssetBundleInfo> abDict)
     {
-        m_abDict.Clear();
+        abDict.Clear();
         List<string> depends = GetAllDepends(abName);
         for(int i  = 0; i< depends.Count; i++)
         {
             var Assetinfo = LoadAssetBundle(depends[i], isSync);
             if(Assetinfo != null)
             {
-                m_abDict.Add(depends[i], Assetinfo);
+                abDict.Add(depends[i], Assetinfo);
             }
             else
             {
@@ -85,7 +94,7 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
         var MainAssetInfo = LoadAssetBundle(abName, isSync);
         if(MainAssetInfo != null)
         {
-            m_abDict.Add(abName, MainAssetInfo);
+            abDict.Add(abName, MainAssetInfo);
         }
     }
 
@@ -104,6 +113,17 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
                     assetInfo.assetBundle = assetBundle;
                 }
             }
+            else
+            {
+                var requeset = AssetBundle.LoadFromFileAsync(abPath);
+                Debug.LogError("load bundle" + abPath);
+                if (requeset != null)
+                {
+                    assetInfo.LoadRequest = requeset;
+                    m_bundleLists.AddAssetInfoToLoadingList(assetInfo);
+                }
+
+            }
             return assetInfo;
         }
         return null;
@@ -114,5 +134,9 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
         return FileManager.Instance.GetFullPath(abName);
     }
 
+    public string GetAssetName(string resPath)
+    {
+        return Path.GetFileName(resPath);
+    }
     
 }

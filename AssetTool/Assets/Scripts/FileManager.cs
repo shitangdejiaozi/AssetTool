@@ -40,7 +40,7 @@ public class FileManager : Singleton<FileManager>
     public string GetFullPath(string path)
     {
 #if UNITY_EDITOR 
-        return m_BundlePath + path;
+        return m_BundlePath +"/" + path;
 #endif
         string updatePath = GetUpdatePath(path);
         if (File.Exists(updatePath))

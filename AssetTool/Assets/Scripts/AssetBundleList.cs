@@ -9,6 +9,7 @@ public class AssetBundleList
     public string Platform = string.Empty; 
     public int TotalCount = 0;
     public List<AssetBundleInfo> BundleList = new List<AssetBundleInfo>();
+    private List<AssetBundleInfo> m_loadingBundleList = new List<AssetBundleInfo>();
     private string Assetbundle_Ex = ".ab";
 
     public class AssetBundleInfo
@@ -16,6 +17,7 @@ public class AssetBundleList
         public string FileName = string.Empty;
         public string Md5Name = string.Empty;
         private AssetBundle _assetBundle = null;
+        private AssetBundleCreateRequest _loadRequest = null;
         public string[] DependNames = null;
         public int[] DependIndex = null;
 
@@ -30,6 +32,43 @@ public class AssetBundleList
                 _assetBundle = value;
             }
         }
+
+        public AssetBundleCreateRequest LoadRequest
+        {
+            get
+            {
+                return _loadRequest;
+            }
+            set
+            {
+                _loadRequest = value;
+            }
+        }
+
+        public bool IsLoaded()
+        {
+            if (_assetBundle != null)
+                return true;
+            else
+                return false;
+        }
+
+        public bool CheckLoading()
+        {
+            if (_loadRequest == null)
+                return false;
+
+            if (!_loadRequest.isDone)
+                return true;
+
+            if(_loadRequest.assetBundle != null)
+            {
+                assetBundle = _loadRequest.assetBundle;
+            }
+            _loadRequest = null;
+            return false;
+        }
+
 
     }
 
@@ -123,8 +162,8 @@ public class AssetBundleList
         StringBuilder builder = new StringBuilder();
         builder.Append(Path.GetDirectoryName(assetName)).Append(Assetbundle_Ex);
         string abName = builder.ToString().ToLower();
-        abName.Replace("\\", "/");
-
+        abName = abName.Replace("\\", "/");
+        Debug.LogError("ab name :" + abName);
         string realName = null;
         var AssetInfo = GetAssetInfo(abName);
 
@@ -138,5 +177,25 @@ public class AssetBundleList
         }
 
         return realName;
+    }
+
+    public void AddAssetInfoToLoadingList(AssetBundleInfo bundleInfo)
+    {
+        m_loadingBundleList.Add(bundleInfo);
+    }
+
+    public void CheckAsyncLoad()
+    {
+        for(int i = 0; i < m_loadingBundleList.Count; i++)
+        {
+            var bundleInfo = m_loadingBundleList[i];
+            if (!bundleInfo.CheckLoading())
+            {
+                m_loadingBundleList.Remove(bundleInfo);
+            }
+
+        }
+       
+
     }
 }

@@ -11,6 +11,7 @@ public class ResourceManager : Singleton<ResourceManager>
     private List<string> bundleResRoot = new List<string>(); //保存打包的资源的相对于Resources的路径
     private string strRes = "Resources";
 
+    private List<LoadAssetTask> m_loadingAssetTask = new List<LoadAssetTask>();  //正在加载的任务
     public void Initialize()
     {
         var buildCfg = AssetDatabase.LoadAssetAtPath<BuildConfig>(configPath);
@@ -26,6 +27,27 @@ public class ResourceManager : Singleton<ResourceManager>
         }
     }
 
+    public void Update()
+    {
+        for(int i = 0; i< m_loadingAssetTask.Count; i++)
+        {
+            var task = m_loadingAssetTask[i];
+            try
+            {
+                task.CheckLoad();
+            }
+            catch(Exception e)
+            {
+                Debug.LogError(" error" + e.Message);
+            }
+            if(task.isComplete)
+            {
+                m_loadingAssetTask.Remove(task);
+            }
+
+        }
+    }
+
     public T Load<T>(string resPath) where T: UnityEngine.Object
     {
         if(string.IsNullOrEmpty(resPath))
@@ -33,22 +55,53 @@ public class ResourceManager : Singleton<ResourceManager>
             return null;
         }
         T resObj;
-        if(IsUseBundle(resPath))
+        LoadAssetTask loadTask;
+        if (IsUseBundle(resPath))
         {
-            resObj = LoadFromBundle(resPath, typeof(T) ,true) as T;
+            loadTask = new LoadAssetFromBundle(resPath, typeof(T));
         }
         else
         {
-            resObj = LoadFromResource(resPath, typeof(T), true) as T;
+            loadTask = new LoadAssetFromResource(resPath, typeof(T));
         }
 
+        loadTask.isSync = true;
+        loadTask.StartLoad();
 
+        resObj = loadTask.LoadedAsset as T;
+        if(resObj == null)
+        {
+            Debug.LogError("加载失败: " + resPath);
+        }
         return resObj;
+    }
+
+    public LoadAssetTask LoadAsync<T>(string resPath, Action<LoadAssetTask> callBack = null) where T: UnityEngine.Object
+    {
+
+        if (string.IsNullOrEmpty(resPath))
+        {
+            return null;
+        }
+        LoadAssetTask loadTask;
+        if (IsUseBundle(resPath))
+        {
+            loadTask = new LoadAssetFromBundle(resPath, typeof(T));
+        }
+        else
+        {
+            loadTask = new LoadAssetFromResource(resPath, typeof(T));
+        }
+        loadTask.isSync = false;
+        loadTask.loadedCallback = callBack;
+        loadTask.StartLoad();
+
+        return loadTask;
     }
 
     private bool IsUseBundle(string resPath)
     {
-        bool isUse = false;
+        bool isUse = true;
 #if USE_ASSETBUNDLE
         
         for(int i = 0; i< bundleResRoot.Count; i++)
@@ -63,30 +116,8 @@ public class ResourceManager : Singleton<ResourceManager>
         return isUse;
     }
 
-    private Object LoadFromResource(string resPath, Type type, bool isSync)
+    public void AddLoadAssetTask(LoadAssetTask task)
     {
-        Object loadAssets = new Object();
-        if(isSync)
-        {
-            loadAssets = Resources.Load(resPath, type);
-        }
-        else
-        {
-            var request = Resources.LoadAsync(resPath, type);
-        }
-        return loadAssets;
-    }
-
-    private Object LoadFromBundle(string resPath, Type type, bool isSync)
-    {
-        Object loadAssets = new Object();
-        string abName = AssetBundleManager.Instance.GetAssetBundleName(resPath);
-
-        if(isSync)
-        {
-
-
-        }
-        return null;
+        m_loadingAssetTask.Add(task);
     }
 }
