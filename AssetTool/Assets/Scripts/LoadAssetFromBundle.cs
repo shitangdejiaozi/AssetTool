@@ -37,7 +37,7 @@ public class LoadAssetFromBundle : LoadAssetTask
     public override void CheckLoad()
     {
         base.CheckLoad();
-        if(CheckAllLoad())
+        if(CheckAllLoad()) //要等所有的依赖ab都加载完了，才能从ab中获取asset
         {
             AssetBundleList.AssetBundleInfo assetInfo = null;
             AssetBundle mainAb = null;

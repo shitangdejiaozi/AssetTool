@@ -103,30 +103,74 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
         var assetInfo = m_bundleLists.GetAssetInfo(abName);
         if(assetInfo != null)
         {
-            string abPath = GetBundleFullPath(abName);
-            if(isSync)
+            if(assetInfo.IsCanLoad()) //判断是否可以加载，是否已经加载过了
             {
-                AssetBundle assetBundle = AssetBundle.LoadFromFile(abPath);
-                Debug.LogError("load bundle" + abPath);
-                if(assetBundle != null)
+                string abPath = GetBundleFullPath(abName);
+                if (isSync)
                 {
-                    assetInfo.assetBundle = assetBundle;
-                }
-            }
-            else
-            {
-                var requeset = AssetBundle.LoadFromFileAsync(abPath);
-                Debug.LogError("load bundle" + abPath);
-                if (requeset != null)
-                {
-                    assetInfo.LoadRequest = requeset;
-                    m_bundleLists.AddAssetInfoToLoadingList(assetInfo);
-                }
+                    if(assetInfo.LoadRequest != null) //同步的会取消掉异步的检查,不用等待了,但是还是会重复的加载
+                    {
+                        assetInfo.LoadRequest = null; 
+                    }
 
+                    AssetBundle assetBundle = AssetBundle.LoadFromFile(abPath);
+                    Debug.LogError("load bundle" + abPath);
+                    if (assetBundle != null)
+                    {
+                        assetInfo.assetBundle = assetBundle;
+                    }
+                }
+                else
+                {
+                    if(assetInfo.LoadRequest == null) //避免两个异步同时加载
+                    {
+                        var requeset = AssetBundle.LoadFromFileAsync(abPath);
+                        Debug.LogError("load bundle" + abPath);
+                        if (requeset != null)
+                        {
+                            assetInfo.LoadRequest = requeset;
+                            m_bundleLists.AddAssetInfoToLoadingList(assetInfo);
+                        }
+                    }
+                    
+
+                }
+                return assetInfo;
             }
-            return assetInfo;
+            
         }
         return null;
+    }
+
+    /// <summary>
+    /// 卸载ab
+    /// </summary>
+    /// <param name="bundleName"></param>
+    /// <param name="unloadAllLoadedObjects">为true,不仅会卸载ab,而且会卸载ab中加载的资源</param>
+    public void UnloadAssetBundle(string bundleName, bool unloadAllLoadedObjects = false)
+    {
+        if (string.IsNullOrEmpty(bundleName))
+            return;
+
+        m_bundleLists.UnloadAssetBundle(bundleName, unloadAllLoadedObjects);
+    }
+
+    /// <summary>
+    /// 通过assetname来卸载对应的ab
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="unloadAllLoadedObjects"></param>
+    public void UnloadAssetBundleByAssetName(string assetName, bool unloadAllLoadedObjects = false)
+    {
+        if (string.IsNullOrEmpty(assetName))
+            return;
+        string bundleName = GetAssetBundleName(assetName);
+        Debug.LogErrorFormat("unload ab {0}, by asset :{1}", bundleName, assetName);
+
+        if (!string.IsNullOrEmpty(bundleName))
+        {
+            m_bundleLists.UnloadAssetBundle(bundleName, unloadAllLoadedObjects);
+        }
     }
 
     public string GetBundleFullPath(string abName)

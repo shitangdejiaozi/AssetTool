@@ -53,9 +53,21 @@ public class AssetBundleList
                 return false;
         }
 
+        /// <summary>
+        /// 是否可以加载
+        /// </summary>
+        /// <returns></returns>
+        public bool IsCanLoad()
+        {
+            if (_assetBundle == null)
+                return true;
+            else
+                return false;
+        }
+
         public bool CheckLoading()
         {
-            if (_loadRequest == null)
+            if (_loadRequest == null) //已经完成了，或者被取消了
                 return false;
 
             if (!_loadRequest.isDone)
@@ -65,7 +77,7 @@ public class AssetBundleList
             {
                 assetBundle = _loadRequest.assetBundle;
             }
-            _loadRequest = null;
+            _loadRequest = null; //加载完成后，置为空了
             return false;
         }
 
@@ -156,7 +168,18 @@ public class AssetBundleList
         }
         return null;
     }
+    
+    public void UnloadAssetBundle(string bundleName, bool unloadAllloadedObjects)
+    {
+        var assetinfo = GetAssetInfo(bundleName);
+        if(assetinfo != null)
+        {
+            assetinfo.assetBundle.Unload(unloadAllloadedObjects);
+            assetinfo.assetBundle = null;
+            Debug.LogError("unload ab" + assetinfo.FileName);
+        }
 
+    }
     public string GetBundleName(string assetName)
     {
         StringBuilder builder = new StringBuilder();
